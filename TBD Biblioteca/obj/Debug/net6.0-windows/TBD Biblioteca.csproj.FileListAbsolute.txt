@@ -1,0 +1,17 @@
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\bin\Debug\net6.0-windows\TBD Biblioteca.exe
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\bin\Debug\net6.0-windows\TBD Biblioteca.deps.json
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\bin\Debug\net6.0-windows\TBD Biblioteca.runtimeconfig.json
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\bin\Debug\net6.0-windows\TBD Biblioteca.dll
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\bin\Debug\net6.0-windows\TBD Biblioteca.pdb
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\obj\Debug\net6.0-windows\TBD Biblioteca.csproj.AssemblyReference.cache
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\obj\Debug\net6.0-windows\TBD_Biblioteca.Form1.resources
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\obj\Debug\net6.0-windows\TBD Biblioteca.csproj.GenerateResource.cache
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\obj\Debug\net6.0-windows\TBD Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\obj\Debug\net6.0-windows\TBD Biblioteca.AssemblyInfoInputs.cache
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\obj\Debug\net6.0-windows\TBD Biblioteca.AssemblyInfo.cs
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\obj\Debug\net6.0-windows\TBD Biblioteca.csproj.CoreCompileInputs.cache
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\obj\Debug\net6.0-windows\TBD Biblioteca.dll
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\obj\Debug\net6.0-windows\refint\TBD Biblioteca.dll
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\obj\Debug\net6.0-windows\TBD Biblioteca.pdb
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\obj\Debug\net6.0-windows\TBD Biblioteca.genruntimeconfig.cache
+F:\projetos\hehe\trabalho-banco-de-dados\TBD Biblioteca\obj\Debug\net6.0-windows\ref\TBD Biblioteca.dll
