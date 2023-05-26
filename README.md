@@ -13,7 +13,6 @@
 
 
 ## versões
----
 
 IDE:  Visual Studio Community 2022
 
@@ -22,7 +21,6 @@ BD: MySQL 8.0.33
 Compilador: padrão do VS community
 
 ## downloads
----
 
 [server MySQL](https://dev.mysql.com/downloads/file/?id=518220)
 
