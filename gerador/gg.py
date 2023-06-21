@@ -2,6 +2,7 @@ import pandas as pd
 import random
 import time
 import os
+from unidecode import unidecode
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
     
@@ -21,6 +22,23 @@ def random_date(start, end, prop):
 def name(f,l) :
     return random.choice(f) + " " + random.choice(l)
 
+def email(fl,df) :
+    data = []
+    for x in df.iloc:
+        n = unidecode(str(x).split(', ')[0].lower())
+        while len(n) < fl :
+            n += str(random.randint(1,9))
+        data.append(n[0:fl] + "@gmail.com")
+
+    return data
+
+def rc(tf,df) :
+    data = []
+    for x in df.iloc:
+        data.append(tf.sample(n=1).values[0])
+
+    return data
+
 def cr(c) :
     return random.choice(c)
 
@@ -33,27 +51,25 @@ def tn() :
 def aluno(ui,f,l):
     data = []
     for x in range(0,50) :
-        mat = random.randint(20000,60000)
         e = random_date("2019-1-1", "2023-1-1", random.random())
-        data.append([mat,name(f,l),"rua algum lugar",e[0],e[1],random.randint(1,10),ui])
+        data.append([random.randint(20000,60000),ui,name(f,l),"rua algum lugar",e[0],e[1],random.randint(1,10)])
         ui+=1
-    return pd.DataFrame(data, columns=["Matricula","Nome", "Endereco", "DataIngresso", "DataConclusaoPrevista", "Cursos_CodCurso", "Usuario_CodUsuario"])
+    return pd.DataFrame(data, columns=["Matricula", "Usuario_CodUsuario","Nome", "Endereco", "DataIngresso", "DataConclusaoPrevista", "Cursos_CodCurso"])
 
 def professor(ui,f,l):
     data = []
     for x in range(0,20) :
         e = random_date("2019-1-1", "2023-1-1", random.random())
-        data.append([random.randint(10000,30000),name(f,l),"rua algum lugar",tn(),random.choice(["20h","40h","DE"]),e[0],random.randint(1,10),ui])
+        data.append([random.randint(10000,30000),ui,name(f,l),"rua algum lugar",tn(),random.choice(["20h","40h","DE"]),e[0],random.randint(1,10)])
         ui+=1
-    return pd.DataFrame(data, columns=["MatSiape", "Nome", "Endereco", "TelefoneCelular", "RegimeTrabalho", "DataContratacao", "Cursos_CodCurso", "Usuario_CodUsuario"])
+    return pd.DataFrame(data, columns=["MatSiape", "Usuario_CodUsuario", "Nome", "Endereco", "TelefoneCelular", "RegimeTrabalho", "DataContratacao", "Cursos_CodCurso"])
 
 def funcionario(ui,f,l) :
     data = []
     for x in range(0,30) :
-        mat = random.randint(10000,30000)
-        data.append([mat,name(f,l),"rua algum lugar",ui])
+        data.append([random.randint(20000,60000),ui,name(f,l),"rua algum lugar"])
         ui+=1
-    return pd.DataFrame(data, columns=["Matricula", "Nome", "endereco", "Usuario_CodUsuario"])
+    return pd.DataFrame(data, columns=["Matricula", "Usuario_CodUsuario", "Nome", "endereco"])
 
 def usuario(a,p,f,u):
     data = []
@@ -81,12 +97,11 @@ def to_sqlmod(tabela,df):
     for x in df.iloc:
         insert+="("
         for y in x:
-            if isinstance(y, int):
-                insert += str(y) + ","
-            else: 
-                insert += "'"+str(y)+"'" + ","
+                y = str(y).replace("'","")
+                insert += "'"+ unidecode(y) +"'" + ","
         insert=insert[:-1] + "),\n"
 
-    insert=insert[:-2]
-    f = open(dir_path + "\\dados_gerados\\" + tabela + ".sql", "x")
+    insert=insert[:-2] + ";\n"
+    f = open(dir_path + "\\generated\\" + tabela + ".sql", "w")
     f.write(insert)
+    f.close()

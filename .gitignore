@@ -129,9 +129,14 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
-
 _NCrunch*
 
+# Backup mysql workbench
 *.mwb.bak
 
-catalogo.csv
+# tabelas usadas para o gerador
+gerador/input/
+gerador/generated/
+
+# pycache
+gerador/__pycache__/
