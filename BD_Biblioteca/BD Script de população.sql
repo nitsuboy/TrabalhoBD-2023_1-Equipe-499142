@@ -726,8 +726,6 @@ INSERT INTO Livros_has_Autores(Autores_Email,Livros_ISBN) VALUES
 ('cardoso99463763@gmail.com','978-989-677-016-7'),
 ('morgado46887927@gmail.com','972-8621-79-5'),
 ('magalhaes676614@gmail.com','978-972-21-1467-7'),
-('magalhaes676614@gmail.com','978-972-21-1467-7'),
-('magalhaes628377@gmail.com','978-972-21-1467-7'),
 ('magalhaes628377@gmail.com','978-972-21-1467-7'),
 ('alcada514699112@gmail.com','978-972-21-1467-7'),
 ('sa9263668935121@gmail.com','972-25-0997-7'),
