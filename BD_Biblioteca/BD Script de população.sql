@@ -544,7 +544,7 @@ INSERT INTO Livros(ISBN,Titulo,AnoDeLancamento,Editora,QuanCopias,Categoria_CodC
 ('978-989-616-929-9','Manual de investigacao em ciencias sociais','2019','Gradiva','4','4'),
 ('972-98539-8-3','A pequena forma','2003','Camara Municipal','6','1'),
 ('972-46-0798-4','Duvidas do falar portugues','1983','Noticias','9','4'),
-('92-827-5413-8','Study on the technical and economic aspects of measures to reduce water pollution caused by discharges from the industrial sectors involved in the surface treatment of metal','1996','Office for Official Publications of the European Communities','3','3'),
+('92-827-5413-8','Study on the technical and economic aspects of measures to reduce water pollution','1996','Office for Official Publications of the European Communities','3','3'),
 ('978-989-564-536-7','De boca aberta','2022','Booksmile','6','4'),
 ('978-972-98489-3-3','Flora da estufa quente de Lisboa','2011','Camara Municipal','5','3'),
 ('978-972-44-2475-0','A maconaria','2022','Edicoes 70','7','4'),
