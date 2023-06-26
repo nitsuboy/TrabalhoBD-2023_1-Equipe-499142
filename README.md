@@ -1,5 +1,5 @@
 # Introdução
-![](https://img.shields.io/badge/c%23-%2366217B?style=for-the-badge&logo=csharp&logoColor=white)
+![](https://img.shields.io/badge/c%23-%2366217B?style=for-the-badge&logo=csharp&logoColor=white) 
 ![](https://img.shields.io/badge/MySQL-%231e4c68?style=for-the-badge&logo=MySQL&logoColor=%23e3752c)
 
 
@@ -12,7 +12,7 @@ Os scripts de população e de criação  se encontram [aqui](BD_Biblioteca) jun
 
 ## downloads
 
-[server MySQL](https://dev.mysql.com/downloads/file/?id=518220)
+[server MySQL](https://dev.mysql.com/downloads/installer/)
 
 [MySQL workbench](https://dev.mysql.com/downloads/file/?id=517975)
 
