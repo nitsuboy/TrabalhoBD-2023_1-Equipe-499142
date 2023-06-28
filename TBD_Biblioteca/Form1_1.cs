@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TBD_Biblioteca
 {
-    public partial class Administrador : Form
+    public partial class Form1_1 : Form
     {
-        public Administrador()
+        public Form1_1()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

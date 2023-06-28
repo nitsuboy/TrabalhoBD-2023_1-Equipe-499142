@@ -38,14 +38,14 @@ namespace TBD_Biblioteca
 
         private void consulta_Click(object sender, EventArgs e)
         {
-            DataTable livros = new DataTable(); 
+            DataTable livros = new DataTable();
             try
             {
                 cmd.CommandText = "SELECT * FROM livros";
                 MySqlDataReader dados = cmd.ExecuteReader();
                 livros.Load(dados);
                 dados.Close();
-                dataGridView1.DataSource= livros;   
+                dataGridView1.DataSource = livros;
             }
             catch (Exception ex)
             {

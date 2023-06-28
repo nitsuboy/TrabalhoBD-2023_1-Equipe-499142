@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TBD_Biblioteca
 {
-    public partial class Administrador : Form
+    public partial class Form1_3 : Form
     {
-        public Administrador()
+        public Form1_3()
         {
             InitializeComponent();
         }

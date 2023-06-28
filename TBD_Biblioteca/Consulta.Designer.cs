@@ -28,107 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.consulta = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            comboBox1 = new ComboBox();
+            textBox3 = new TextBox();
+            dataGridView1 = new DataGridView();
+            textBox4 = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 36);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 23);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "TÍTULO";
+            textBox1.Location = new Point(26, 48);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(190, 27);
+            textBox1.TabIndex = 0;
+            textBox1.Text = "TÍTULO";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(194, 37);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 23);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "AUTOR";
+            textBox2.Location = new Point(222, 49);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(190, 27);
+            textBox2.TabIndex = 1;
+            textBox2.Text = "AUTOR";
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(366, 37);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(143, 23);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.Text = "CATEGÓRIA";
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(418, 49);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(163, 28);
+            comboBox1.TabIndex = 2;
+            comboBox1.Text = "CATEGORIA";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(514, 38);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 23);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "EDITORA";
+            textBox3.Location = new Point(587, 51);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(190, 27);
+            textBox3.TabIndex = 3;
+            textBox3.Text = "EDITORA";
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 120);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(750, 261);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            dataGridView1.BackgroundColor = SystemColors.ControlLight;
+            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(26, 160);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(857, 348);
+            dataGridView1.TabIndex = 4;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(685, 38);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(88, 23);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.Text = "ANO";
+            textBox4.Location = new Point(783, 51);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(100, 27);
+            textBox4.TabIndex = 5;
+            textBox4.Text = "ANO";
             // 
-            // consulta
+            // Consulta
             // 
-            this.consulta.Location = new System.Drawing.Point(23, 71);
-            this.consulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.consulta.Name = "consulta";
-            this.consulta.Size = new System.Drawing.Size(104, 29);
-            this.consulta.TabIndex = 6;
-            this.consulta.Text = "CONSULTAR";
-            this.consulta.UseVisualStyleBackColor = true;
-            this.consulta.Click += new System.EventHandler(this.consulta_Click);
-            // 
-            // Form3
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(783, 456);
-            this.Controls.Add(this.consulta);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form3";
-            this.Text = "Consulta";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(895, 608);
+            Controls.Add(textBox4);
+            Controls.Add(dataGridView1);
+            Controls.Add(textBox3);
+            Controls.Add(comboBox1);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Name = "Consulta";
+            Text = "Consulta";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
