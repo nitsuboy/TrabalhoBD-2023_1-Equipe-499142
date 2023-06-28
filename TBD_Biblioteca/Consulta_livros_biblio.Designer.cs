@@ -82,20 +82,11 @@
             // 
             // filtro_tb
             // 
-<<<<<<< Updated upstream
             this.filtro_tb.Location = new System.Drawing.Point(360, 10);
             this.filtro_tb.Name = "filtro_tb";
             this.filtro_tb.PlaceholderText = "Filtro";
             this.filtro_tb.Size = new System.Drawing.Size(182, 23);
             this.filtro_tb.TabIndex = 5;
-=======
-            filtro_tb.Location = new Point(412, 13);
-            filtro_tb.Margin = new Padding(3, 4, 3, 4);
-            filtro_tb.Name = "filtro_tb";
-            filtro_tb.PlaceholderText = "Filtrar por nome";
-            filtro_tb.Size = new Size(208, 27);
-            filtro_tb.TabIndex = 5;
->>>>>>> Stashed changes
             // 
             // Consulta_livros_biblio
             // 

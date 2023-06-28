@@ -84,6 +84,15 @@ namespace TBD_Biblioteca
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             cmd.CommandText = "INSERT INTO reservas (Usuario_CodUsuario, Livros_ISBN,reservadata) VALUES (" + Globals.user + ",'" + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + "',now())";
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("reserva efetuada");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -39,7 +39,7 @@ namespace TBD_Biblioteca
                 dados.Close();
                 if (string.Equals(senha.Text, s[0]) && !string.Equals("", s[0]))
                 {
-                    Globals.user = s[3];
+                    Globals.user = s[2];
                     switch (s[1])
                     {
                         case "usuario":
