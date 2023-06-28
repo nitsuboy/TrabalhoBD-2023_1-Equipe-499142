@@ -10,13 +10,13 @@ namespace TBD_Biblioteca
         [STAThread]
         public static string connstring()
         {
-            return "server=localhost;uid=root;pwd=lg290300;database=bibliotecadb";
+            return "server=localhost;uid=root;pwd=cacho;database=bibliotecadb";
         }
+        
 
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            Globals.conn = "server=localhost;uid=root;pwd=cacho;database=bibliotecadb";
             ApplicationConfiguration.Initialize();
             Application.Run(new login());
         }

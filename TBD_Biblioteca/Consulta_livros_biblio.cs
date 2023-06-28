@@ -14,7 +14,7 @@ namespace TBD_Biblioteca
 {
     public partial class Consulta_livros_biblio : Form
     {
-        MySqlConnection conn;
+        MySqlConnection conn = new MySqlConnection(Program.connstring());
         MySqlCommand cmd = new MySqlCommand();
 
         public Consulta_livros_biblio()
@@ -22,7 +22,6 @@ namespace TBD_Biblioteca
             InitializeComponent();
             try
             {
-                conn = new MySqlConnection(Program.connstring());
                 conn.Open();
                 cmd.Connection = conn;
             }
