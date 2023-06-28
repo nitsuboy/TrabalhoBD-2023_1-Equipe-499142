@@ -16,14 +16,13 @@ namespace TBD_Biblioteca
     {
         MySqlConnection conn = new MySqlConnection(Program.connstring());
         MySqlCommand cmd = new MySqlCommand();
-
         public Consulta_livros_biblio()
         {
-            InitializeComponent();
             try
             {
                 conn.Open();
                 cmd.Connection = conn;
+                InitializeComponent();
             }
             catch (Exception ex)
             {
