@@ -10,7 +10,7 @@ namespace TBD_Biblioteca
         [STAThread]
         public static string connstring()
         {
-            return "server=localhost;uid=root;pwd=q45wzhr0;database=bibliotecadb";
+            return "server=localhost;uid=root;pwd=lg290300;database=bibliotecadb";
         }
         
 

@@ -50,11 +50,15 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(46, 117);
+            dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(697, 280);
             dataGridView1.TabIndex = 2;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // button2
             // 
@@ -78,10 +82,10 @@
             // 
             // filtro_tb
             // 
-            filtro_tb.Location = new System.Drawing.Point(360, 10);
+            filtro_tb.Location = new Point(433, 13);
             filtro_tb.Name = "filtro_tb";
             filtro_tb.PlaceholderText = "Filtro";
-            filtro_tb.Size = new System.Drawing.Size(182, 23);
+            filtro_tb.Size = new Size(182, 27);
             filtro_tb.TabIndex = 5;
             // 
             // Consulta_livros_biblio

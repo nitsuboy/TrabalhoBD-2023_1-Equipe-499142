@@ -33,8 +33,6 @@ namespace TBD_Biblioteca
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 adapter.Fill(reservas);
                 dataGridView1.DataSource = reservas;
-
-                MessageBox.Show("cu largo");
             }
             catch (Exception ex)
             {
@@ -53,7 +51,7 @@ namespace TBD_Biblioteca
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CarregarReservas();
+            
         }
     }
 }
