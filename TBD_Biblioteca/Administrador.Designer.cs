@@ -1,6 +1,6 @@
 ﻿namespace TBD_Biblioteca
 {
-    partial class Consulta_livros_biblio
+    partial class Administrador
     {
         /// <summary>
         /// Required designer variable.
@@ -28,82 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox = new TextBox();
+            label1 = new Label();
             button1 = new Button();
-            dataGridView1 = new DataGridView();
             button2 = new Button();
             button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // textBox
+            // label1
             // 
-            textBox.Location = new Point(46, 24);
-            textBox.Name = "textBox";
-            textBox.PlaceholderText = "Nome, Autor, Editora, Categoria ou Ano de publicação do livro a ser consultado.";
-            textBox.Size = new Size(586, 27);
-            textBox.TabIndex = 0;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(336, 47);
+            label1.Name = "label1";
+            label1.Size = new Size(207, 38);
+            label1.TabIndex = 1;
+            label1.Text = "Administrador";
             // 
             // button1
             // 
-            button1.Location = new Point(654, 24);
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ControlText;
+            button1.Location = new Point(321, 171);
             button1.Name = "button1";
-            button1.Size = new Size(89, 29);
-            button1.TabIndex = 1;
-            button1.Text = "Buscar";
+            button1.Size = new Size(235, 65);
+            button1.TabIndex = 2;
+            button1.Text = "Administrar Livros";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(46, 68);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(697, 329);
-            dataGridView1.TabIndex = 2;
+            button1.Click += adm_AdmLivrosButton_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(46, 403);
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.ControlText;
+            button2.Location = new Point(321, 272);
             button2.Name = "button2";
-            button2.Size = new Size(124, 32);
+            button2.Size = new Size(235, 59);
             button2.TabIndex = 3;
-            button2.Text = "Empréstimo";
+            button2.Text = "Administrar Alunos";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += adm_AdmAlunosButton_Click;
             // 
             // button3
             // 
-            button3.Location = new Point(627, 403);
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = SystemColors.ControlText;
+            button3.Location = new Point(321, 366);
             button3.Name = "button3";
-            button3.Size = new Size(116, 32);
+            button3.Size = new Size(232, 73);
             button3.TabIndex = 4;
-            button3.Text = "Devolução";
+            button3.Text = "Administrar Professores";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += adm_AdmProfessoresButton_Click;
             // 
-            // Livros
+            // Administrador
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(862, 603);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(dataGridView1);
             Controls.Add(button1);
-            Controls.Add(textBox);
-            Name = "Livros";
-            Text = "Livros";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Controls.Add(label1);
+            Name = "Administrador";
+            Text = "Admnistrador";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox;
+        private Label label1;
         private Button button1;
-        private DataGridView dataGridView1;
         private Button button2;
         private Button button3;
     }

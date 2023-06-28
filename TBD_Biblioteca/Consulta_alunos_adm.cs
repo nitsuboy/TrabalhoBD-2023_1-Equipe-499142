@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TBD_Biblioteca
 {
-    public partial class Consulta_professores_adm : Form
+    public partial class Consulta_alunos_adm : Form
     {
-        public Consulta_professores_adm()
+        public Consulta_alunos_adm()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
