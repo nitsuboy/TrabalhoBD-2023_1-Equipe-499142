@@ -28,78 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CADASTRAR = new Button();
-            openFileDialog1 = new OpenFileDialog();
-            Username = new TextBox();
-            textBox2 = new TextBox();
-            label1 = new Label();
-            SuspendLayout();
+            this.login = new System.Windows.Forms.Button();
+            this.Username = new System.Windows.Forms.TextBox();
+            this.senha = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
-            // CADASTRAR
+            // login
             // 
-            CADASTRAR.Cursor = Cursors.Hand;
-            CADASTRAR.FlatAppearance.BorderSize = 0;
-            CADASTRAR.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CADASTRAR.Location = new Point(250, 422);
-            CADASTRAR.Name = "CADASTRAR";
-            CADASTRAR.Size = new Size(150, 50);
-            CADASTRAR.TabIndex = 1;
-            CADASTRAR.Text = "ENTRAR";
-            CADASTRAR.UseVisualStyleBackColor = true;
-            CADASTRAR.Click += CADASTRAR_Click;
-            // 
-            // openFileDialog1
-            // 
-            openFileDialog1.FileName = "openFileDialog1";
+            this.login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login.FlatAppearance.BorderSize = 0;
+            this.login.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.login.Location = new System.Drawing.Point(99, 215);
+            this.login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(131, 38);
+            this.login.TabIndex = 1;
+            this.login.Text = "ENTRAR";
+            this.login.UseVisualStyleBackColor = true;
+            this.login.Click += new System.EventHandler(this.login_Click);
             // 
             // Username
             // 
-            Username.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            Username.Location = new Point(207, 214);
-            Username.Name = "Username";
-            Username.PlaceholderText = "USERNAME";
-            Username.Size = new Size(251, 34);
-            Username.TabIndex = 2;
+            this.Username.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Username.Location = new System.Drawing.Point(56, 112);
+            this.Username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Username.Name = "Username";
+            this.Username.PlaceholderText = "USERNAME";
+            this.Username.Size = new System.Drawing.Size(220, 29);
+            this.Username.TabIndex = 2;
             // 
-            // textBox2
+            // senha
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(207, 295);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "SENHA";
-            textBox2.Size = new Size(251, 34);
-            textBox2.TabIndex = 3;
+            this.senha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.senha.Location = new System.Drawing.Point(56, 164);
+            this.senha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.senha.Name = "senha";
+            this.senha.PlaceholderText = "SENHA";
+            this.senha.Size = new System.Drawing.Size(220, 29);
+            this.senha.TabIndex = 3;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 32F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(234, 67);
-            label1.Name = "label1";
-            label1.Size = new Size(185, 72);
-            label1.TabIndex = 4;
-            label1.Text = "LOGIN";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(88, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 59);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "LOGIN";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(673, 560);
-            Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(Username);
-            Controls.Add(CADASTRAR);
-            Name = "Form1";
-            Text = "Form1";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(334, 274);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.senha);
+            this.Controls.Add(this.Username);
+            this.Controls.Add(this.login);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
-        private Button CADASTRAR;
-        private OpenFileDialog openFileDialog1;
+        private Button login;
         private TextBox Username;
-        private TextBox textBox2;
+        private TextBox senha;
         private Label label1;
     }
 }

@@ -98,7 +98,9 @@ INSERT INTO Usuarios(NomeUsuario,Senha,QntLivros,TipoUsuario,NivelDeAcesso) VALU
 ('solace81','admin','0','Funcionario','usuario'),
 ('influent17','admin','0','Funcionario','usuario'),
 ('botanical47','admin','0','Funcionario','usuario'),
-('canescent5','admin','0','Funcionario','usuario');
+('canescent5','admin','0','Funcionario','usuario'),
+('admin','root','0','Funcionario','administrador'),
+('biblioteca','admin','0','Funcionario','bibliotecario');
 INSERT INTO Cursos(NomeCurso) VALUES 
 ('EngenhariadeTransporteeLogistica'),
 ('Computacao'),
