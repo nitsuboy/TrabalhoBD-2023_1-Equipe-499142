@@ -24,17 +24,20 @@ namespace TBD_Biblioteca
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var livros = new Consulta_livros_biblio();
+            livros.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            var usuarios = new Consulta_usuarios_biblio();
+            usuarios.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            var reservas = new Consulta_reservas_biblio();
+            reservas.ShowDialog();
         }
     }
 }

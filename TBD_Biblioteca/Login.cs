@@ -23,14 +23,14 @@ namespace TBD_Biblioteca
         }
 
         private void login_b_Click(object sender, EventArgs e)
-        {  
+        {
             try
             {
                 cmd.CommandText = "select * from usuarios where nomeUsuario = '" + Username.Text + "'";
                 MySqlDataReader dados = cmd.ExecuteReader();
-                string[] s = {"",""};
+                string[] s = { "", "" };
                 while (dados.Read())
-                { 
+                {
                     s[0] = dados.GetString(2);
                     s[1] = dados.GetString(5);
                 }
@@ -54,25 +54,30 @@ namespace TBD_Biblioteca
                             bib.Show();
                             break;
                     }
-                    
+
                 }
                 else
                 {
                     MessageBox.Show("senha ou usuario incorreto");
                 }
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void cadastro_Click(object sender, EventArgs e)
         {
             Form cad = new Cadastro();
             cad.ShowDialog();
+        }
+
+        private void Username_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
