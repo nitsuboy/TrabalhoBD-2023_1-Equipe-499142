@@ -28,71 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox = new TextBox();
             button1 = new Button();
             dataGridView1 = new DataGridView();
             button2 = new Button();
-            button3 = new Button();
+            checkedListBox1 = new CheckedListBox();
+            filtro_tb = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // textBox
-            // 
-            textBox.Location = new Point(46, 24);
-            textBox.Name = "textBox";
-            textBox.PlaceholderText = "Nome, Autor, Editora, Categoria ou Ano de publicação do livro a ser consultado.";
-            textBox.Size = new Size(586, 27);
-            textBox.TabIndex = 0;
-            // 
             // button1
             // 
-            button1.Location = new Point(654, 24);
+            button1.Location = new Point(639, 12);
             button1.Name = "button1";
-            button1.Size = new Size(89, 29);
+            button1.Size = new Size(104, 92);
             button1.TabIndex = 1;
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += Busca_b_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(46, 68);
+            dataGridView1.Location = new Point(46, 117);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(697, 329);
+            dataGridView1.Size = new Size(697, 280);
             dataGridView1.TabIndex = 2;
             // 
             // button2
             // 
             button2.Location = new Point(46, 403);
             button2.Name = "button2";
-            button2.Size = new Size(124, 32);
+            button2.Size = new Size(203, 32);
             button2.TabIndex = 3;
-            button2.Text = "Empréstimo";
+            button2.Text = "Registrar Empréstimo";
             button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // checkedListBox1
             // 
-            button3.Location = new Point(627, 403);
-            button3.Name = "button3";
-            button3.Size = new Size(116, 32);
-            button3.TabIndex = 4;
-            button3.Text = "Devolução";
-            button3.UseVisualStyleBackColor = true;
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Items.AddRange(new object[] { "Ano de Lançamento", "Autor", "Editora", "Categoria" });
+            checkedListBox1.Location = new Point(46, 13);
+            checkedListBox1.Margin = new Padding(3, 4, 3, 4);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(360, 92);
+            checkedListBox1.TabIndex = 4;
+            checkedListBox1.ItemCheck += checkedListBox1_ItemCheck;
             // 
-            // Livros
+            // filtro_tb
+            // 
+            filtro_tb.Location = new Point(412, 13);
+            filtro_tb.Margin = new Padding(3, 4, 3, 4);
+            filtro_tb.Name = "filtro_tb";
+            filtro_tb.Size = new Size(208, 27);
+            filtro_tb.TabIndex = 5;
+            filtro_tb.Text = "Filtrar por Nome";
+            // 
+            // Consulta_livros_biblio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button3);
+            Controls.Add(filtro_tb);
+            Controls.Add(checkedListBox1);
             Controls.Add(button2);
             Controls.Add(dataGridView1);
             Controls.Add(button1);
-            Controls.Add(textBox);
-            Name = "Livros";
+            Name = "Consulta_livros_biblio";
             Text = "Livros";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -100,11 +103,10 @@
         }
 
         #endregion
-
-        private TextBox textBox;
         private Button button1;
         private DataGridView dataGridView1;
         private Button button2;
-        private Button button3;
+        private CheckedListBox checkedListBox1;
+        private TextBox filtro_tb;
     }
 }
