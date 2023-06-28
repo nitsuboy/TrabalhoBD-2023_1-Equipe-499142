@@ -20,36 +20,33 @@ namespace TBD_Biblioteca
         public Consulta_reservas_biblio()
         {
             InitializeComponent();
-
-            try
-            {
-                conn.Open();
-                cmd.Connection = conn;
-                InitializeComponent();
-                CarregarReservas();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            CarregarReservas();
         }
 
         private void CarregarReservas()
         {
             try
             {
+                conn.Open();
+                cmd.Connection = conn;
                 cmd.CommandText = "SELECT * FROM Reservas";
-                MySqlDataReader dados = cmd.ExecuteReader();
-                reservas.Load(dados);
-                dados.Close();
-                dataGridView1.DataSource = null;
-                dataGridView1.Rows.Clear();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(reservas);
                 dataGridView1.DataSource = reservas;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void Consulta_reservas_biblio_Load(object sender, EventArgs e)
+        {
+            CarregarReservas();
         }
     }
 }
