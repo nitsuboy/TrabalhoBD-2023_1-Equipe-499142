@@ -17,11 +17,11 @@ namespace TBD_Biblioteca
     {
         MySqlConnection conn = new MySqlConnection(Program.connstring());
         MySqlCommand cmd = new MySqlCommand();
+        DataTable livros = new DataTable();
         public Consulta_livros_usuario()
         {
             try
             {
-                conn.Open();
                 cmd.Connection = conn;
                 InitializeComponent();
             }
@@ -31,16 +31,9 @@ namespace TBD_Biblioteca
             } 
         }
 
-        private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
+        private void RecarregarTabela()
         {
-            for (int ix = 0; ix < checkedListBox1.Items.Count; ++ix)
-                if (ix != e.Index) checkedListBox1.SetItemChecked(ix, false);
-        }
-
-        private void Busca_b_Click(object sender, EventArgs e)
-        {
-            string[] tabela = {"livros","titulo"};
-            DataTable livros = new DataTable();
+            string[] tabela = { "livros", "titulo" };
             try
             {
                 switch (checkedListBox1.CheckedItems[0])
@@ -63,14 +56,16 @@ namespace TBD_Biblioteca
                         break;
                 }
             }
-            catch (Exception){}
-            
+            catch (Exception) { }
+
             try
             {
-                cmd.CommandText = "SELECT * FROM "+ tabela[0] +" WHERE " + tabela[1] + " LIKE \"%" + filtro_tb.Text + "%\";";
-                MySqlDataReader dados = cmd.ExecuteReader();
-                livros.Load(dados);
-                dados.Close();
+                conn.Open();
+                cmd.Connection = conn;
+                cmd.CommandText = "SELECT * FROM " + tabela[0] + " WHERE " + tabela[1] + " LIKE \"%" + filtro_tb.Text + "%\";";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                livros.Clear();
+                adapter.Fill(livros);
                 dataGridView1.DataSource = null;
                 dataGridView1.Rows.Clear();
                 dataGridView1.DataSource = livros;
@@ -79,15 +74,37 @@ namespace TBD_Biblioteca
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int ix = 0; ix < checkedListBox1.Items.Count; ++ix)
+                if (ix != e.Index) checkedListBox1.SetItemChecked(ix, false);
+        }
+
+        private void Busca_b_Click(object sender, EventArgs e)
+        {
+            RecarregarTabela();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            conn.Open();
             cmd.CommandText = "INSERT INTO reservas (Usuario_CodUsuario, Livros_ISBN,reservadata) VALUES (" + Globals.user + ",'" + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + "',now())";
             try
             {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("reserva efetuada");
+                DialogResult res = MessageBox.Show("você deseja reservar esse livro ?","reserva",MessageBoxButtons.YesNo);
+                if (res == DialogResult.Yes)
+                {
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("reserva efetuada");
+                    conn.Close();
+                    RecarregarTabela();
+                }
             }
             catch(Exception ex)
             {

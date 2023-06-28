@@ -51,7 +51,7 @@ namespace TBD_Biblioteca
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CarregarReservas();
+            
         }
     }
 }
