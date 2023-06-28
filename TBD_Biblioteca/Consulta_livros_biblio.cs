@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TBD_Biblioteca
 {
-    public partial class reservas : Form
+    public partial class Consulta_livros_biblio : Form
     {
-        public reservas()
+        public Consulta_livros_biblio()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

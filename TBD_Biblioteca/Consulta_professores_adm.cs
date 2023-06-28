@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace TBD_Biblioteca
 {
-    public partial class usuarios : Form
+    public partial class Consulta_professores_adm : Form
     {
-        public usuarios()
+        public Consulta_professores_adm()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

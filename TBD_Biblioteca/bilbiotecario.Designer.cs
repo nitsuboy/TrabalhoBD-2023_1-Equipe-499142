@@ -1,6 +1,6 @@
 ﻿namespace TBD_Biblioteca
 {
-    partial class bilbiotecario
+    partial class Bilbiotecario
     {
         /// <summary>
         /// Required designer variable.

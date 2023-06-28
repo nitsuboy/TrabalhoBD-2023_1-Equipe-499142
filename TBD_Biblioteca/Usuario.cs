@@ -12,7 +12,7 @@ namespace TBD_Biblioteca
 {
     public partial class Usuario : Form
     {
-        Form livros = new Consulta();
+        Form livros = new Consulta_livros_usuario();
         public Usuario()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace TBD_Biblioteca
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var livros = new Consulta();
+            var livros = new Consulta_livros_usuario();
             livros.ShowDialog();
         }
     }

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace TBD_Biblioteca
 {
-    public partial class Livros : Form
+    public partial class Consulta_livros_adm : Form
     {
-        public Livros()
+        public Consulta_livros_adm()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

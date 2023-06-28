@@ -1,6 +1,6 @@
 ﻿namespace TBD_Biblioteca
 {
-    partial class reservas
+    partial class Consulta_reservas_biblio
     {
         /// <summary>
         /// Required designer variable.

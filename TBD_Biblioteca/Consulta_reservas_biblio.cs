@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace TBD_Biblioteca
 {
-    public partial class Form2 : Form
+    public partial class Consulta_reservas_biblio : Form
     {
-        Form livros = new Form3();
-        Form alugue = new Form4();
-        public Form2()
+        public Consulta_reservas_biblio()
         {
             InitializeComponent();
-        }
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var livros = new Form3();
-            livros.ShowDialog();
         }
     }
 }
