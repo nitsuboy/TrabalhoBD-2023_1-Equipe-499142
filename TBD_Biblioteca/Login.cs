@@ -46,6 +46,10 @@ namespace TBD_Biblioteca
                             user.Show();
                             break;
                         case "administrador":
+                            this.Hide();
+                            var adm = new Administrador();
+                            adm.Closed += (s, args) => this.Close();
+                            adm.Show();
                             break;
                         case "bibliotecario":
                             this.Hide();
@@ -60,7 +64,6 @@ namespace TBD_Biblioteca
                 {
                     MessageBox.Show("senha ou usuario incorreto");
                 }
-
             }
             catch (Exception ex)
             {

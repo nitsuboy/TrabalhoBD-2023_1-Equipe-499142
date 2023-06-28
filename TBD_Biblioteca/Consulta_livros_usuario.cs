@@ -22,12 +22,12 @@ namespace TBD_Biblioteca
             {
                 conn.Open();
                 cmd.Connection= conn;
+                InitializeComponent();
             }
             catch(Exception ex) 
             {
                 MessageBox.Show(ex.Message);
             } 
-            InitializeComponent();
         }
 
         private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
