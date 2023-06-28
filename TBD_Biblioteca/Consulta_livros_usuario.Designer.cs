@@ -56,8 +56,10 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(776, 326);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // Busca_b
             // 
@@ -76,7 +78,7 @@
             this.filtro_tb.Size = new System.Drawing.Size(102, 23);
             this.filtro_tb.TabIndex = 3;
             // 
-            // Consulta
+            // Consulta_livros_usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -85,7 +87,7 @@
             this.Controls.Add(this.Busca_b);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.checkedListBox1);
-            this.Name = "Consulta";
+            this.Name = "Consulta_livros_usuario";
             this.Text = "Consulta";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

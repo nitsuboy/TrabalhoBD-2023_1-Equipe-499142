@@ -1,4 +1,5 @@
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Utilities;
 using System.Linq.Expressions;
 using System.Windows.Forms;
 
@@ -28,15 +29,17 @@ namespace TBD_Biblioteca
             {
                 cmd.CommandText = "select * from usuarios where nomeUsuario = '" + Username.Text + "'";
                 MySqlDataReader dados = cmd.ExecuteReader();
-                string[] s = { "", "" };
+                string[] s = { "", "" , ""};
                 while (dados.Read())
                 {
                     s[0] = dados.GetString(2);
                     s[1] = dados.GetString(5);
+                    s[2] = dados.GetString(0);
                 }
                 dados.Close();
                 if (string.Equals(senha.Text, s[0]) && !string.Equals("", s[0]))
                 {
+                    Globals.user = s[2];
                     switch (s[1])
                     {
                         case "usuario":

@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Utilities.Collections;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,7 @@ namespace TBD_Biblioteca
             try
             {
                 conn.Open();
-                cmd.Connection= conn;
+                cmd.Connection = conn;
                 InitializeComponent();
             }
             catch(Exception ex) 
@@ -78,6 +79,11 @@ namespace TBD_Biblioteca
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cmd.CommandText = "INSERT INTO reservas (Usuario_CodUsuario, Livros_ISBN,reservadata) VALUES (" + Globals.user + ",'" + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + "',now())";
         }
     }
 }
