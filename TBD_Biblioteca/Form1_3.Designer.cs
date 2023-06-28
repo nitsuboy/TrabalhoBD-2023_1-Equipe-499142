@@ -50,7 +50,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(55, 108);
+            textBox1.Location = new Point(55, 99);
             textBox1.MinimumSize = new Size(0, 40);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Digite a matrícula siape";
@@ -60,7 +60,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(304, 108);
+            button1.Location = new Point(297, 99);
             button1.Name = "button1";
             button1.Size = new Size(128, 40);
             button1.TabIndex = 5;
@@ -70,7 +70,7 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(475, 108);
+            button2.Location = new Point(464, 99);
             button2.Name = "button2";
             button2.Size = new Size(135, 40);
             button2.TabIndex = 6;

@@ -1,6 +1,6 @@
 ﻿namespace TBD_Biblioteca
 {
-    partial class Form1_1
+    partial class AdmAlunos
     {
         /// <summary>
         /// Required designer variable.
