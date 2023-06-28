@@ -44,6 +44,7 @@ namespace TBD_Biblioteca
                 cmd.CommandText = "SELECT * FROM livros";
                 MySqlDataReader dados = cmd.ExecuteReader();
                 livros.Load(dados);
+                dados.Close();
                 dataGridView1.DataSource= livros;   
             }
             catch (Exception ex)

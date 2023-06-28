@@ -140,3 +140,5 @@ gerador/generated/
 
 # pycache
 gerador/__pycache__/
+
+/.vs
