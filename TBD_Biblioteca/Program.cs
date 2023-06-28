@@ -1,4 +1,5 @@
 using MySql.Data.MySqlClient;
+using System.Net.Mail;
 
 namespace TBD_Biblioteca
 {
@@ -10,7 +11,9 @@ namespace TBD_Biblioteca
         [STAThread]
         public static string connstring()
         {
-            return "server=localhost;uid=root;pwd=cacho;database=bibliotecadb";
+            string usuario = "root";
+            string senha = "cacho";
+            return "server=localhost;uid="+usuario+";pwd="+senha+";database=bibliotecadb";
         }
 
         static void Main()
