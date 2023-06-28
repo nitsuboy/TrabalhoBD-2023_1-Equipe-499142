@@ -46,8 +46,10 @@ namespace TBD_Biblioteca
                             form2.Show();
                             break;
                         case "administrador":
+                            MessageBox.Show("adm");
                             break;
                         case "bibliotecario":
+                            MessageBox.Show("biblio");
                             break;
                     }
                     

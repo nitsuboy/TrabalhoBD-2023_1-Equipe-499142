@@ -13,7 +13,6 @@ namespace TBD_Biblioteca
     public partial class Usuario : Form
     {
         Form livros = new Consulta();
-        Form alugue = new Form4();
         public Usuario()
         {
             InitializeComponent();
