@@ -1,5 +1,4 @@
 using MySql.Data.MySqlClient;
-using System.Net.Mail;
 
 namespace TBD_Biblioteca
 {
@@ -11,9 +10,7 @@ namespace TBD_Biblioteca
         [STAThread]
         public static string connstring()
         {
-            string usuario = "root";
-            string senha = "cacho";
-            return "server=localhost;uid="+usuario+";pwd="+senha+";database=bibliotecadb";
+            return "server=localhost;uid=root;pwd=cacho;database=bibliotecadb";
         }
 
         static void Main()
@@ -21,7 +18,7 @@ namespace TBD_Biblioteca
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new login());
+            Application.Run(new Form1());
         }
     }
 }
