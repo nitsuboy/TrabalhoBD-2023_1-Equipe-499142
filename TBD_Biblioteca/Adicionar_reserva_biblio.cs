@@ -28,37 +28,7 @@ namespace TBD_Biblioteca
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text))
-            {
-                MessageBox.Show("Digite uma matrícula válida");
-                return;
-            }
-
-            if (!string.IsNullOrEmpty(ISBNSelecionado))
-            {
-                cmd.CommandText = "INSERT INTO reservas (Usuario_CodUsuario, Livros_ISBN, reservadata) VALUES (@Usuario_CodUsuario, @ISBN, NOW())";
-                cmd.Parameters.AddWithValue("@CodUsuario", textBox1.Text);
-                cmd.Parameters.AddWithValue("@ISBN", ISBNSelecionado);
-
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                    ReservaConcluida = true;
-                    this.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Ocorreu um erro: " + ex.Message);
-                }
-                finally
-                {
-                    cmd.Parameters.Clear();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Nenhum livro selecionado");
-            }
+            
         }
     }
 }

@@ -82,21 +82,7 @@ namespace TBD_Biblioteca
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
-            {
-                var reservar = new Adicionar_reserva_biblio();
-                reservar.ISBNSelecionado = dataGridView1.SelectedRows[0].Cells["ISBN"].Value.ToString();
-                reservar.ShowDialog();
-
-                if (reservar.ReservaConcluida)
-                {
-                    MessageBox.Show("Reserva efetuada");
-                }
-                else
-                {
-                    MessageBox.Show("Reserva cancelada ou ocorreu um erro");
-                }
-            }
+            
         }
     }
 }
