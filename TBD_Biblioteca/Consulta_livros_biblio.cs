@@ -14,7 +14,7 @@ namespace TBD_Biblioteca
 {
     public partial class Consulta_livros_biblio : Form
     {
-        MySqlConnection conn = new MySqlConnection(Program.connstring());
+        MySqlConnection conn = new MySqlConnection(Globals.conn);
         MySqlCommand cmd = new MySqlCommand();
         public Consulta_livros_biblio()
         {
@@ -82,7 +82,8 @@ namespace TBD_Biblioteca
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            Form add = new reserva(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            add.ShowDialog();
         }
     }
 }

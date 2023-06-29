@@ -8,26 +8,60 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
 
 namespace TBD_Biblioteca
 {
-    public partial class Adicionar_reserva_biblio : Form
+    public partial class reserva : Form
     {
-        MySqlConnection conn = new MySqlConnection(Program.connstring());
+        MySqlConnection conn = new MySqlConnection(Globals.conn);
         MySqlCommand cmd = new MySqlCommand();
-        public string ISBNSelecionado { get; set; } // Propriedade para armazenar o ISBN selecionado
-        public bool ReservaConcluida { get; private set; } // Propriedade para indicar se a reserva foi concluída
+        string ISBN = "";
 
-        public Adicionar_reserva_biblio()
+        public reserva(string isbn)
         {
+            ISBN = isbn;
             conn.Open();
             cmd.Connection = conn;
             InitializeComponent();
         }
 
-
         private void button2_Click(object sender, EventArgs e)
         {
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    cmd.CommandText = "select usuario_codusuario from alunos where Matricula = " + textBox1.Text;
+                    break;
+                case 1:
+                    cmd.CommandText = "select usuario_codusuario from professores where matsiape = " + textBox1.Text;
+                    break;
+                case 2:
+                    cmd.CommandText = "select usuario_codusuario from funcionarios where Matricula = " + textBox1.Text;
+                    break;
+                default:
+                    MessageBox.Show("selecione uma opção");
+                    break;
+            }
+            try
+            {
+                MySqlDataReader dados = cmd.ExecuteReader();
+                string cod = "";
+                while (dados.Read())
+                {
+                    cod = dados.GetString(0);
+                }
+                dados.Close();
+                cmd.CommandText = "INSERT INTO reservas (Usuario_CodUsuario, Livros_ISBN,reservadata) VALUES (" + cod + ",'" + ISBN + "',now())";
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("reserva efetuada");
+                this.Close();
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             
         }
     }

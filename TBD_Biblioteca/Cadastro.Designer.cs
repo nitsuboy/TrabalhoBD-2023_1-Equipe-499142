@@ -28,244 +28,257 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            textBox1 = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
-            textBox2 = new TextBox();
-            label4 = new Label();
-            textBox3 = new TextBox();
-            label5 = new Label();
-            textBox4 = new TextBox();
-            label6 = new Label();
-            textBox5 = new TextBox();
-            comboBox1 = new ComboBox();
-            label7 = new Label();
-            button1 = new Button();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(500, 52);
-            label1.Name = "label1";
-            label1.Size = new Size(150, 37);
-            label1.TabIndex = 0;
-            label1.Text = "CADASTRO";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(438, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 30);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CADASTRO";
             // 
             // textBox1
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(186, 262);
-            textBox1.MinimumSize = new Size(0, 40);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Ex: Gabriel Augusto Farias Gomes";
-            textBox1.Size = new Size(558, 40);
-            textBox1.TabIndex = 1;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(163, 196);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.MinimumSize = new System.Drawing.Size(4, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PlaceholderText = "Ex: Gabriel Augusto Farias Gomes";
+            this.textBox1.Size = new System.Drawing.Size(489, 29);
+            this.textBox1.TabIndex = 1;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(186, 231);
-            label2.Name = "label2";
-            label2.Size = new Size(74, 28);
-            label2.TabIndex = 2;
-            label2.Text = "Nome:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(163, 173);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 21);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nome:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(776, 231);
-            label3.Name = "label3";
-            label3.Size = new Size(108, 28);
-            label3.TabIndex = 3;
-            label3.Text = "Matrícula:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(679, 173);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(87, 21);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Matrícula:";
             // 
             // textBox2
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(776, 262);
-            textBox2.MinimumSize = new Size(0, 40);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Ex: 499142";
-            textBox2.Size = new Size(174, 40);
-            textBox2.TabIndex = 4;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Location = new System.Drawing.Point(679, 196);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.MinimumSize = new System.Drawing.Size(4, 40);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PlaceholderText = "Ex: 499142";
+            this.textBox2.Size = new System.Drawing.Size(153, 29);
+            this.textBox2.TabIndex = 4;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(186, 319);
-            label4.Name = "label4";
-            label4.Size = new Size(106, 28);
-            label4.TabIndex = 5;
-            label4.Text = "CodCurso:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(163, 239);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 21);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "CodCurso:";
             // 
             // textBox3
             // 
-            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(186, 350);
-            textBox3.MinimumSize = new Size(0, 40);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Ex: Engeharia de computação";
-            textBox3.Size = new Size(299, 40);
-            textBox3.TabIndex = 6;
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox3.Location = new System.Drawing.Point(163, 262);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.MinimumSize = new System.Drawing.Size(4, 40);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.PlaceholderText = "Ex: Engeharia de computação";
+            this.textBox3.Size = new System.Drawing.Size(262, 29);
+            this.textBox3.TabIndex = 6;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(546, 319);
-            label5.Name = "label5";
-            label5.Size = new Size(104, 28);
-            label5.TabIndex = 7;
-            label5.Text = "Endereço:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(478, 239);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 21);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Endereço:";
             // 
             // textBox4
             // 
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(518, 350);
-            textBox4.MinimumSize = new Size(0, 40);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Ex: Rua Pedro Aguiar Carneiro";
-            textBox4.Size = new Size(432, 40);
-            textBox4.TabIndex = 8;
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox4.Location = new System.Drawing.Point(453, 262);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox4.MinimumSize = new System.Drawing.Size(4, 40);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.PlaceholderText = "Ex: Rua Pedro Aguiar Carneiro";
+            this.textBox4.Size = new System.Drawing.Size(378, 29);
+            this.textBox4.TabIndex = 8;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(186, 419);
-            label6.Name = "label6";
-            label6.Size = new Size(98, 28);
-            label6.TabIndex = 9;
-            label6.Text = "Telefone:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(163, 314);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 21);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Telefone:";
             // 
             // textBox5
             // 
-            textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(186, 459);
-            textBox5.MinimumSize = new Size(0, 40);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Ex:(88)99488-8118";
-            textBox5.Size = new Size(253, 40);
-            textBox5.TabIndex = 10;
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5.Location = new System.Drawing.Point(163, 344);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox5.MinimumSize = new System.Drawing.Size(4, 40);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.PlaceholderText = "Ex:(88)99488-8118";
+            this.textBox5.Size = new System.Drawing.Size(222, 29);
+            this.textBox5.TabIndex = 10;
             // 
             // comboBox1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Aluno", "Professor", "Funcionario" });
-            comboBox1.Location = new Point(472, 459);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(206, 28);
-            comboBox1.TabIndex = 11;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Aluno",
+            "Professor",
+            "Funcionario"});
+            this.comboBox1.Location = new System.Drawing.Point(420, 350);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(181, 23);
+            this.comboBox1.TabIndex = 11;
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(472, 428);
-            label7.Name = "label7";
-            label7.Size = new Size(59, 28);
-            label7.TabIndex = 12;
-            label7.Text = "Tipo:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(413, 321);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 21);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Tipo:";
             // 
             // button1
             // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(537, 609);
-            button1.Name = "button1";
-            button1.Size = new Size(150, 55);
-            button1.TabIndex = 13;
-            button1.Text = "CADASTRAR";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(470, 457);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 41);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "CADASTRAR";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox6
             // 
-            textBox6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox6.Location = new Point(186, 170);
-            textBox6.MinimumSize = new Size(0, 40);
-            textBox6.Name = "textBox6";
-            textBox6.PlaceholderText = "Ex: GabrielAfg";
-            textBox6.Size = new Size(433, 40);
-            textBox6.TabIndex = 14;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox6.Location = new System.Drawing.Point(163, 128);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox6.MinimumSize = new System.Drawing.Size(4, 40);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.PlaceholderText = "Ex: GabrielAfg";
+            this.textBox6.Size = new System.Drawing.Size(379, 29);
+            this.textBox6.TabIndex = 14;
             // 
             // textBox7
             // 
-            textBox7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox7.Location = new Point(651, 170);
-            textBox7.MinimumSize = new Size(0, 40);
-            textBox7.Name = "textBox7";
-            textBox7.PlaceholderText = "Ex: 123456";
-            textBox7.Size = new Size(299, 40);
-            textBox7.TabIndex = 15;
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox7.Location = new System.Drawing.Point(570, 128);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox7.MinimumSize = new System.Drawing.Size(4, 40);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.PlaceholderText = "Ex: 123456";
+            this.textBox7.Size = new System.Drawing.Size(262, 29);
+            this.textBox7.TabIndex = 15;
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(182, 139);
-            label8.Name = "label8";
-            label8.Size = new Size(115, 28);
-            label8.TabIndex = 16;
-            label8.Text = "UserName:";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(159, 104);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 21);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "UserName:";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(651, 139);
-            label9.Name = "label9";
-            label9.Size = new Size(74, 28);
-            label9.TabIndex = 17;
-            label9.Text = "Senha:";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(570, 104);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 21);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Senha:";
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(472, 419);
-            label10.Name = "label10";
-            label10.Size = new Size(0, 28);
-            label10.TabIndex = 19;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(413, 314);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 21);
+            this.label10.TabIndex = 19;
             // 
             // Cadastro
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1182, 753);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(button1);
-            Controls.Add(label7);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox5);
-            Controls.Add(label6);
-            Controls.Add(textBox4);
-            Controls.Add(label5);
-            Controls.Add(textBox3);
-            Controls.Add(label4);
-            Controls.Add(textBox2);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
-            Name = "Cadastro";
-            Text = "Cadastro";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1034, 565);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Cadastro";
+            this.Text = "Cadastro";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

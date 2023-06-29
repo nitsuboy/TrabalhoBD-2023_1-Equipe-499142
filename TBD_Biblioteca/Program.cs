@@ -8,15 +8,10 @@ namespace TBD_Biblioteca
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        public static string connstring()
-        {
-            return "server=localhost;uid=root;pwd=lg290300;database=bibliotecadb";
-        }
-        
 
         static void Main()
         {
-            Globals.conn = "server=localhost;uid=root;pwd=lg290300;database=bibliotecadb";
+            Globals.conn = "server=localhost;uid=root;pwd=cacho;database=bibliotecadb";
             ApplicationConfiguration.Initialize();
             Application.Run(new login());
         }

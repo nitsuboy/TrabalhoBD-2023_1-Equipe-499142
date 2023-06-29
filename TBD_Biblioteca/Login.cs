@@ -7,7 +7,7 @@ namespace TBD_Biblioteca
 {
     public partial class login : Form
     {
-        MySqlConnection conn = new MySqlConnection(Program.connstring());
+        MySqlConnection conn = new MySqlConnection(Globals.conn);
         MySqlCommand cmd = new MySqlCommand();
         public login()
         {

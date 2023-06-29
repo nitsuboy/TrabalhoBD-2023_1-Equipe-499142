@@ -13,7 +13,7 @@ namespace TBD_Biblioteca
 {
     public partial class Cadastro : Form
     {
-        MySqlConnection conn = new MySqlConnection(Program.connstring());
+        MySqlConnection conn = new MySqlConnection(Globals.conn);
         MySqlCommand cmd = new MySqlCommand();
         public Cadastro()
         {
@@ -89,6 +89,7 @@ namespace TBD_Biblioteca
                 }
 
                 MessageBox.Show( comboBox1.Text +" cadastrado com sucesso! Código do usuário: " + codigoUsuario);
+                this.Close();
             }
             catch (Exception ex)
             {

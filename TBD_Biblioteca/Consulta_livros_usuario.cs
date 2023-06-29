@@ -15,7 +15,7 @@ namespace TBD_Biblioteca
 {
     public partial class Consulta_livros_usuario : Form
     {
-        MySqlConnection conn = new MySqlConnection(Program.connstring());
+        MySqlConnection conn = new MySqlConnection(Globals.conn);
         MySqlCommand cmd = new MySqlCommand();
         DataTable livros = new DataTable();
         public Consulta_livros_usuario()
