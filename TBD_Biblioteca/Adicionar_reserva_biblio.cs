@@ -36,7 +36,7 @@ namespace TBD_Biblioteca
 
             if (!string.IsNullOrEmpty(ISBNSelecionado))
             {
-                cmd.CommandText = "INSERT INTO reservas (Usuario_CodUsuario, Livros_ISBN, reservadata) VALUES (@CodUsuario, @ISBN, NOW())";
+                cmd.CommandText = "INSERT INTO reservas (Usuario_CodUsuario, Livros_ISBN, reservadata) VALUES (@Usuario_CodUsuario, @ISBN, NOW())";
                 cmd.Parameters.AddWithValue("@CodUsuario", textBox1.Text);
                 cmd.Parameters.AddWithValue("@ISBN", ISBNSelecionado);
 
@@ -48,7 +48,7 @@ namespace TBD_Biblioteca
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Ocorreu um erro: " + ex.Message);
                 }
                 finally
                 {
