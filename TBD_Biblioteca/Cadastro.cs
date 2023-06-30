@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Utilities.Collections;
 
 namespace TBD_Biblioteca
 {
@@ -83,6 +84,9 @@ namespace TBD_Biblioteca
                 }
                 if (comboBox1.SelectedIndex == 2)
                 {
+
+                    INSERT INTO funcionarios_telefones(funcionarios_matricula, numtelefone) VALUES(20574, listTelephones.)
+
                     textBox3.Enabled = false;
 
                     cmd.CommandText = "INSERT INTO funcionarios" +
