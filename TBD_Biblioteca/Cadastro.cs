@@ -27,14 +27,17 @@ namespace TBD_Biblioteca
                 cmd.Connection = conn;
                 InitializeComponent();
                 listTelephones.Add(textBox5);
+                comboBox1.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            cmd.Parameters.Clear();
             try
             {
                 cmd.CommandText =
@@ -51,8 +54,6 @@ namespace TBD_Biblioteca
                 if (comboBox1.SelectedIndex == 0)
                 {
 
-                    textBox8.Enabled = false;
-
                     cmd.CommandText = "INSERT INTO alunos" +
                                       " (matricula, usuario_codusuario, nome, endereco, dataingresso, dataconclusaoprevista, cursos_codcurso) " +
                                       "VALUES (@matricula, @codigoUsuario, @nome, @endereco, @dataingresso, @dataconclusaoprevista, @cursos_codcurso)";
@@ -66,12 +67,22 @@ namespace TBD_Biblioteca
                     cmd.Parameters.AddWithValue("@cursos_codcurso", textBox3.Text);
 
                     cmd.ExecuteNonQuery();
+                    foreach (var box in listTelephones)
+                    {
+                        if (!string.Equals(box.Text,""))
+                        {
+                            cmd.CommandText = "INSERT INTO alunos_telefones(alunos_matricula, numtelefone) VALUES(" + textBox2.Text + ",'" + box.Text + "')";
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+
                 }
                 if (comboBox1.SelectedIndex == 1)
                 {
                     cmd.CommandText = "INSERT INTO professores" +
-                                      " (matsiape, usuario_codusuario, nome, endereco, telefonecelular, regimetrabalho, datacontratacao) " +
-                                      "VALUES (@matsiape, @codigoUsuario, @nome, @endereco, @telefonecelular, 'DE', @datacontratacao)";
+                                      " (matsiape, usuario_codusuario, nome, endereco, telefonecelular, regimetrabalho, datacontratacao, cursos_codcurso) " +
+                                      "VALUES (@matsiape, @codigoUsuario, @nome, @endereco, @telefonecelular, @carga , @datacontratacao, @cursos_codcurso)";
 
                     cmd.Parameters.AddWithValue("@matsiape", textBox2.Text);
                     cmd.Parameters.AddWithValue("@codigoUsuario", codigoUsuario);
@@ -79,14 +90,13 @@ namespace TBD_Biblioteca
                     cmd.Parameters.AddWithValue("@endereco", textBox4.Text);
                     cmd.Parameters.AddWithValue("@telefonecelular", textBox5.Text);
                     cmd.Parameters.AddWithValue("@datacontratacao", DateTime.Now);
+                    cmd.Parameters.AddWithValue("@carga",comboBox2.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@cursos_codcurso", textBox3.Text);
 
                     cmd.ExecuteNonQuery();
                 }
                 if (comboBox1.SelectedIndex == 2)
                 {
-
-                    INSERT INTO funcionarios_telefones(funcionarios_matricula, numtelefone) VALUES(20574, listTelephones.)
-
                     textBox3.Enabled = false;
 
                     cmd.CommandText = "INSERT INTO funcionarios" +
@@ -99,6 +109,16 @@ namespace TBD_Biblioteca
                     cmd.Parameters.AddWithValue("@endereco", textBox4.Text);
 
                     cmd.ExecuteNonQuery();
+
+                    foreach (var box in listTelephones)
+                    {
+                        if (!string.Equals(box.Text, ""))
+                        {
+                            cmd.CommandText = "INSERT INTO funcionarios_telefones(funcionarios_matricula, numtelefone) VALUES(" + textBox2.Text + ", @telephone)";
+                            cmd.Parameters.AddWithValue("@telephone", box.Text);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
                 }
 
                 MessageBox.Show( comboBox1.Text +" cadastrado com sucesso! Código do usuário: " + codigoUsuario);
@@ -114,17 +134,20 @@ namespace TBD_Biblioteca
         {
             if (comboBox1.SelectedIndex == 0) // alunos
             {
-                textBox8.Enabled = false;
+                button2.Enabled = true;
+                comboBox2.Enabled = false;
             }
             else if (comboBox1.SelectedIndex == 2) // funcionários
             {
-                textBox8.Enabled = false;
+                button2.Enabled = true;
+                comboBox2.Enabled = false;
                 textBox3.Enabled = false;
             }
             else
             {
-                textBox8.Enabled = true;
+                comboBox2.Enabled = true;
                 textBox3.Enabled = true;
+                button2.Enabled = false;
             }
         }
 
