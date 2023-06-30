@@ -8,7 +8,6 @@ namespace TBD_Biblioteca
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-
         static void Main()
         {
             Globals.conn = "server=localhost;uid=root;pwd=cacho;database=bibliotecadb";
