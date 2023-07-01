@@ -135,17 +135,25 @@ namespace TBD_Biblioteca
             if (comboBox1.SelectedIndex == 0) // alunos
             {
                 button2.Enabled = true;
+                textBox3.Enabled = true;
+                label11.Enabled = false;
                 comboBox2.Enabled = false;
             }
             else if (comboBox1.SelectedIndex == 2) // funcionários
             {
                 button2.Enabled = true;
                 comboBox2.Enabled = false;
+                label11.Enabled= false;
                 textBox3.Enabled = false;
+                label4.Enabled = false;
+                textBox3.PlaceholderText = "";
             }
             else
             {
                 comboBox2.Enabled = true;
+                label4.Enabled = true;
+                textBox3.PlaceholderText = textBox3.PlaceholderText;
+                label11.Enabled = true;
                 textBox3.Enabled = true;
                 button2.Enabled = false;
             }
