@@ -137,6 +137,7 @@ namespace TBD_Biblioteca
                 button2.Enabled = true;
                 textBox3.Enabled = true;
                 label11.Enabled = false;
+                label4.Enabled = true;
                 comboBox2.Enabled = false;
             }
             else if (comboBox1.SelectedIndex == 2) // funcionários

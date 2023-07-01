@@ -55,7 +55,7 @@ namespace TBD_Biblioteca
         {
             try
             {
-                cmd.CommandText = "DELETE FROM livros WHERE isbn= '" + textBox1.Text+"'";
+                cmd.CommandText = "DELETE FROM livros WHERE isbn= '" + textBox1.Text + "'";
                 cmd.ExecuteNonQuery();
                 refresh();
             }
@@ -74,8 +74,8 @@ namespace TBD_Biblioteca
                     " SET " +
                     "titulo= '" + textBox2.Text +
                     "', editora= '" + textBox3.Text +
-                    "', anodelancamento= " + textBox4.Text + 
-                    " WHERE isbn= '" + textBox1.Text+"'";
+                    "', anodelancamento= " + textBox4.Text +
+                    " WHERE isbn= '" + textBox1.Text + "'";
                 cmd.ExecuteNonQuery();
                 refresh();
             }
@@ -83,6 +83,11 @@ namespace TBD_Biblioteca
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
