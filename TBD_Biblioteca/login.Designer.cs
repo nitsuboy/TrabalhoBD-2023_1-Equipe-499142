@@ -40,13 +40,14 @@
             this.login_b.Cursor = System.Windows.Forms.Cursors.Hand;
             this.login_b.FlatAppearance.BorderSize = 0;
             this.login_b.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.login_b.Location = new System.Drawing.Point(99, 215);
+            this.login_b.Location = new System.Drawing.Point(88, 279);
             this.login_b.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.login_b.Name = "login_b";
             this.login_b.Size = new System.Drawing.Size(131, 38);
             this.login_b.TabIndex = 1;
-            this.login_b.Text = "ENTRAR";
+            this.login_b.Text = "Cadastrar";
             this.login_b.UseVisualStyleBackColor = true;
+            this.login_b.Click += new System.EventHandler(this.cadastro_Click);
             // 
             // Username
             // 
@@ -84,13 +85,14 @@
             this.cadastro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cadastro.FlatAppearance.BorderSize = 0;
             this.cadastro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cadastro.Location = new System.Drawing.Point(99, 269);
+            this.cadastro.Location = new System.Drawing.Point(88, 227);
             this.cadastro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cadastro.Name = "cadastro";
             this.cadastro.Size = new System.Drawing.Size(131, 38);
             this.cadastro.TabIndex = 5;
-            this.cadastro.Text = "CADASTRAR";
+            this.cadastro.Text = "Entrar";
             this.cadastro.UseVisualStyleBackColor = true;
+            this.cadastro.Click += new System.EventHandler(this.login_b_Click);
             // 
             // login
             // 

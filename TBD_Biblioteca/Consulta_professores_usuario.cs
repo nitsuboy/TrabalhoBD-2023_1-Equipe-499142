@@ -38,7 +38,7 @@ namespace TBD_Biblioteca
             {
                 conn.Open();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT * FROM professoresporcurso WHERE professor LIKE \"%" + filtro_tb.Text + "%\";";
+                cmd.CommandText = "SELECT * FROM professoresporcurso WHERE curso LIKE \"%" + filtro_tb.Text + "%\";";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 livros.Clear();
                 adapter.Fill(livros);

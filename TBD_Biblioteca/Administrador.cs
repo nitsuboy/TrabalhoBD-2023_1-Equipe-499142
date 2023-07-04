@@ -23,13 +23,13 @@ namespace TBD_Biblioteca
         }
         private void adm_AdmAlunosButton_Click(object sender, EventArgs e)
         {
-            Form AdministrarAlunos = new Consulta_alunos_adm();
-            AdministrarAlunos.ShowDialog();
+            //Form AdministrarAlunos = new Consulta_alunos_adm();
+            //AdministrarAlunos.ShowDialog();
         }
         private void adm_AdmProfessoresButton_Click(object sender, EventArgs e)
         {
-            Form AdministrarProfessores = new Consulta_professores_adm();
-            AdministrarProfessores.ShowDialog();
+            //Form AdministrarProfessores = new Consulta_professores_adm();
+            //AdministrarProfessores.ShowDialog();
         }
     }
 }
