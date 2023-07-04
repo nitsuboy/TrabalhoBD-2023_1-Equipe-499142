@@ -145,7 +145,7 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // Admnistrar_alunos
+            // Admnistrar_usuarios
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -160,8 +160,8 @@
             Controls.Add(button3);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
-            Name = "Admnistrar_alunos";
-            Text = "Admnistrar alunos";
+            Name = "Admnistrar_usuarios";
+            Text = "Admnistrar usuarios";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

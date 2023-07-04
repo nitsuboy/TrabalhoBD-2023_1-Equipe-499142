@@ -125,7 +125,7 @@
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Name = "Admnistrar_autores";
-            Text = "Admnistrar alunos";
+            Text = "Admnistrar autores";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

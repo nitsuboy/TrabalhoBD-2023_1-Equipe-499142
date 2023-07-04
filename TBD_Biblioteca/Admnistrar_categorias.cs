@@ -85,7 +85,7 @@ namespace TBD_Biblioteca
 
                 cmd.Parameters.AddWithValue("@codcategoria", textBox1.Text);
                 cmd.Parameters.AddWithValue("@descricao", textBox2.Text);
-               
+
                 cmd.ExecuteNonQuery();
                 refresh();
             }
