@@ -1,4 +1,5 @@
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Crmf;
 using Org.BouncyCastle.Utilities;
 using System.Linq.Expressions;
 using System.Windows.Forms;
@@ -20,7 +21,13 @@ namespace TBD_Biblioteca
             {
                 MessageBox.Show("falha ao conectar ao banco de dados");
             }
+            
             InitializeComponent();
+            login_b.Left = (this.ClientSize.Width - login_b.Width) / 2;
+            cadastro.Left = (this.ClientSize.Width - cadastro.Width) / 2;
+            Username.Left = (this.ClientSize.Width - Username.Width) / 2;
+            senha.Left = (this.ClientSize.Width - senha.Width) / 2;
+            label1.Left = (this.ClientSize.Width - label1.Width) / 2;
         }
 
         private void login_b_Click(object sender, EventArgs e)

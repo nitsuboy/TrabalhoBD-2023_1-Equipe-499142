@@ -40,7 +40,7 @@
             this.login_b.Cursor = System.Windows.Forms.Cursors.Hand;
             this.login_b.FlatAppearance.BorderSize = 0;
             this.login_b.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.login_b.Location = new System.Drawing.Point(88, 279);
+            this.login_b.Location = new System.Drawing.Point(106, 283);
             this.login_b.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.login_b.Name = "login_b";
             this.login_b.Size = new System.Drawing.Size(131, 38);
@@ -52,7 +52,7 @@
             // Username
             // 
             this.Username.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Username.Location = new System.Drawing.Point(56, 112);
+            this.Username.Location = new System.Drawing.Point(56, 111);
             this.Username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Username.Name = "Username";
             this.Username.PlaceholderText = "USERNAME";
@@ -61,6 +61,7 @@
             // 
             // senha
             // 
+            this.senha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.senha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.senha.Location = new System.Drawing.Point(56, 164);
             this.senha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -72,9 +73,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(88, 9);
+            this.label1.Location = new System.Drawing.Point(106, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 59);
             this.label1.TabIndex = 4;
@@ -85,7 +87,7 @@
             this.cadastro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cadastro.FlatAppearance.BorderSize = 0;
             this.cadastro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cadastro.Location = new System.Drawing.Point(88, 227);
+            this.cadastro.Location = new System.Drawing.Point(106, 228);
             this.cadastro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cadastro.Name = "cadastro";
             this.cadastro.Size = new System.Drawing.Size(131, 38);
