@@ -13,12 +13,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace TBD_Biblioteca
 {
-    public partial class Consulta_livros_usuario : Form
+    public partial class Consulta_livros_adm : Form
     {
         MySqlConnection conn = new MySqlConnection(Globals.conn);
         MySqlCommand cmd = new MySqlCommand();
         DataTable livros = new DataTable();
-        public Consulta_livros_usuario()
+        public Consulta_livros_adm()
         {
             try
             {

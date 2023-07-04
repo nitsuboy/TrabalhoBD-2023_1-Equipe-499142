@@ -1,0 +1,86 @@
+﻿namespace TBD_Biblioteca
+{
+    partial class Consulta_professores_usuario
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Busca_b = new System.Windows.Forms.Button();
+            this.filtro_tb = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 60);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(776, 378);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // Busca_b
+            // 
+            this.Busca_b.Location = new System.Drawing.Point(689, 12);
+            this.Busca_b.Name = "Busca_b";
+            this.Busca_b.Size = new System.Drawing.Size(99, 34);
+            this.Busca_b.TabIndex = 2;
+            this.Busca_b.Text = "Buscar";
+            this.Busca_b.UseVisualStyleBackColor = true;
+            this.Busca_b.Click += new System.EventHandler(this.Busca_b_Click);
+            // 
+            // filtro_tb
+            // 
+            this.filtro_tb.Location = new System.Drawing.Point(12, 19);
+            this.filtro_tb.Name = "filtro_tb";
+            this.filtro_tb.Size = new System.Drawing.Size(275, 23);
+            this.filtro_tb.TabIndex = 3;
+            // 
+            // Consulta_professores_usuario
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.filtro_tb);
+            this.Controls.Add(this.Busca_b);
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "Consulta_professores_usuario";
+            this.Text = "Consulta";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+        private DataGridView dataGridView1;
+        private Button Busca_b;
+        private TextBox filtro_tb;
+    }
+}

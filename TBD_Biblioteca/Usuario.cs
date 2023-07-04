@@ -24,5 +24,11 @@ namespace TBD_Biblioteca
             var livros = new Consulta_livros_usuario();
             livros.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var professores = new Consulta_professores_usuario();
+            professores.ShowDialog();
+        }
     }
 }

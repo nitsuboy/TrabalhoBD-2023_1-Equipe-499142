@@ -73,12 +73,12 @@
             // 
             // filtro_tb
             // 
-            this.filtro_tb.Location = new System.Drawing.Point(171, 12);
+            this.filtro_tb.Location = new System.Drawing.Point(689, 12);
             this.filtro_tb.Name = "filtro_tb";
-            this.filtro_tb.Size = new System.Drawing.Size(208, 23);
+            this.filtro_tb.Size = new System.Drawing.Size(99, 23);
             this.filtro_tb.TabIndex = 3;
             // 
-            // Consulta_livros_usuario
+            // Consulta_livros_adm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -87,7 +87,7 @@
             this.Controls.Add(this.Busca_b);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.checkedListBox1);
-            this.Name = "Consulta_livros_usuario";
+            this.Name = "Consulta_livros_adm";
             this.Text = "Consulta";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -13,4 +13,10 @@
     <PackageReference Include="MySql.Data" Version="8.0.33" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Consulta_professores_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>
