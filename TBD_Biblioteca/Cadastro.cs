@@ -18,7 +18,7 @@ namespace TBD_Biblioteca
         MySqlCommand cmd = new MySqlCommand();
 
         List<TextBox> listTelephones = new List<TextBox>();
-        
+
         public Cadastro()
         {
             try
@@ -33,7 +33,7 @@ namespace TBD_Biblioteca
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -69,7 +69,7 @@ namespace TBD_Biblioteca
                     cmd.ExecuteNonQuery();
                     foreach (var box in listTelephones)
                     {
-                        if (!string.Equals(box.Text,""))
+                        if (!string.Equals(box.Text, ""))
                         {
                             cmd.CommandText = "INSERT INTO alunos_telefones(alunos_matricula, numtelefone) VALUES(" + textBox2.Text + ",'" + box.Text + "')";
                             cmd.ExecuteNonQuery();
@@ -90,7 +90,7 @@ namespace TBD_Biblioteca
                     cmd.Parameters.AddWithValue("@endereco", textBox4.Text);
                     cmd.Parameters.AddWithValue("@telefonecelular", textBox5.Text);
                     cmd.Parameters.AddWithValue("@datacontratacao", DateTime.Now);
-                    cmd.Parameters.AddWithValue("@carga",comboBox2.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@carga", comboBox2.SelectedItem.ToString());
                     cmd.Parameters.AddWithValue("@cursos_codcurso", textBox3.Text);
 
                     cmd.ExecuteNonQuery();
@@ -121,7 +121,7 @@ namespace TBD_Biblioteca
                     }
                 }
 
-                MessageBox.Show( comboBox1.Text +" cadastrado com sucesso! Código do usuário: " + codigoUsuario);
+                MessageBox.Show(comboBox1.Text + " cadastrado com sucesso! Código do usuário: " + codigoUsuario);
                 this.Close();
             }
             catch (Exception ex)
@@ -144,7 +144,7 @@ namespace TBD_Biblioteca
             {
                 button2.Enabled = true;
                 comboBox2.Enabled = false;
-                label11.Enabled= false;
+                label11.Enabled = false;
                 textBox3.Enabled = false;
                 label4.Enabled = false;
                 textBox3.PlaceholderText = "";

@@ -16,20 +16,58 @@ namespace TBD_Biblioteca
         {
             InitializeComponent();
         }
-        private void adm_AdmLivrosButton_Click(object sender, EventArgs e)
+        private void usuarios_b_Click(object sender, EventArgs e)
         {
-            Form AdministrarLivros = new Consulta_livros_adm();
-            AdministrarLivros.ShowDialog();
+            Form usuario = new Admnistrar_usuarios();
+            usuario.ShowDialog();
         }
-        private void adm_AdmAlunosButton_Click(object sender, EventArgs e)
+
+        private void alunos_b_Click(object sender, EventArgs e)
         {
-            //Form AdministrarAlunos = new Consulta_alunos_adm();
-            //AdministrarAlunos.ShowDialog();
+            Form alunos = new Administrar_alunos();
+            alunos.ShowDialog();
         }
-        private void adm_AdmProfessoresButton_Click(object sender, EventArgs e)
+
+        private void professores_b_Click(object sender, EventArgs e)
         {
-            //Form AdministrarProfessores = new Consulta_professores_adm();
-            //AdministrarProfessores.ShowDialog();
+            Form professores = new Administrar_professores();
+            professores.ShowDialog();
+        }
+
+        private void funcionarios_b_Click(object sender, EventArgs e)
+        {
+            Form funcionarios = new Admnistrar_funcionarios();
+            funcionarios.ShowDialog();
+        }
+
+        private void cursos_b_Click(object sender, EventArgs e)
+        {
+            Form cursos = new Admnistrar_cursos();
+            cursos.ShowDialog();
+        }
+
+        private void livros_b_Click(object sender, EventArgs e)
+        {
+            Form livros = new Admnistrar_livros();
+            livros.ShowDialog();
+        }
+
+        private void autores_b_Click(object sender, EventArgs e)
+        {
+            Form autores = new Admnistrar_autores();
+            autores.ShowDialog();
+        }
+
+        private void categorias_b_Click(object sender, EventArgs e)
+        {
+            Form categorias = new Admnistrar_categorias();
+            categorias.ShowDialog();
+        }
+
+        private void reservas_b_Click(object sender, EventArgs e)
+        {
+            Form reservas = new Admnistrar_reservas();
+            reservas.ShowDialog();
         }
     }
 }

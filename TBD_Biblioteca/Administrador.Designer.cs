@@ -28,157 +28,155 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.livros_b = new System.Windows.Forms.Button();
-            this.alunos_b = new System.Windows.Forms.Button();
-            this.professores_b = new System.Windows.Forms.Button();
-            this.funcionarios_b = new System.Windows.Forms.Button();
-            this.usuarios_b = new System.Windows.Forms.Button();
-            this.autores_b = new System.Windows.Forms.Button();
-            this.cursos_b = new System.Windows.Forms.Button();
-            this.categorias_b = new System.Windows.Forms.Button();
-            this.reservas_b = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            label1 = new Label();
+            livros_b = new Button();
+            alunos_b = new Button();
+            professores_b = new Button();
+            funcionarios_b = new Button();
+            usuarios_b = new Button();
+            autores_b = new Button();
+            cursos_b = new Button();
+            categorias_b = new Button();
+            reservas_b = new Button();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(294, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 30);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Administrador";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(336, 47);
+            label1.Name = "label1";
+            label1.Size = new Size(207, 38);
+            label1.TabIndex = 1;
+            label1.Text = "Administrador";
             // 
             // livros_b
             // 
-            this.livros_b.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.livros_b.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.livros_b.Location = new System.Drawing.Point(404, 108);
-            this.livros_b.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.livros_b.Name = "livros_b";
-            this.livros_b.Size = new System.Drawing.Size(200, 45);
-            this.livros_b.TabIndex = 2;
-            this.livros_b.Text = "Administrar Livros";
-            this.livros_b.UseVisualStyleBackColor = true;
+            livros_b.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            livros_b.ForeColor = SystemColors.ControlText;
+            livros_b.Location = new Point(462, 144);
+            livros_b.Name = "livros_b";
+            livros_b.Size = new Size(229, 60);
+            livros_b.TabIndex = 2;
+            livros_b.Text = "Administrar Livros";
+            livros_b.UseVisualStyleBackColor = true;
+            livros_b.Click += livros_b_Click;
             // 
             // alunos_b
             // 
-            this.alunos_b.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.alunos_b.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.alunos_b.Location = new System.Drawing.Point(146, 166);
-            this.alunos_b.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.alunos_b.Name = "alunos_b";
-            this.alunos_b.Size = new System.Drawing.Size(200, 45);
-            this.alunos_b.TabIndex = 3;
-            this.alunos_b.Text = "Administrar Alunos";
-            this.alunos_b.UseVisualStyleBackColor = true;
+            alunos_b.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            alunos_b.ForeColor = SystemColors.ControlText;
+            alunos_b.Location = new Point(167, 221);
+            alunos_b.Name = "alunos_b";
+            alunos_b.Size = new Size(229, 60);
+            alunos_b.TabIndex = 3;
+            alunos_b.Text = "Administrar Alunos";
+            alunos_b.UseVisualStyleBackColor = true;
+            alunos_b.Click += alunos_b_Click;
             // 
             // professores_b
             // 
-            this.professores_b.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.professores_b.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.professores_b.Location = new System.Drawing.Point(146, 226);
-            this.professores_b.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.professores_b.Name = "professores_b";
-            this.professores_b.Size = new System.Drawing.Size(200, 45);
-            this.professores_b.TabIndex = 4;
-            this.professores_b.Text = "Administrar Professores";
-            this.professores_b.UseVisualStyleBackColor = true;
+            professores_b.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            professores_b.ForeColor = SystemColors.ControlText;
+            professores_b.Location = new Point(167, 301);
+            professores_b.Name = "professores_b";
+            professores_b.Size = new Size(229, 60);
+            professores_b.TabIndex = 4;
+            professores_b.Text = "Administrar Professores";
+            professores_b.UseVisualStyleBackColor = true;
+            professores_b.Click += professores_b_Click;
             // 
             // funcionarios_b
             // 
-            this.funcionarios_b.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.funcionarios_b.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.funcionarios_b.Location = new System.Drawing.Point(146, 287);
-            this.funcionarios_b.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.funcionarios_b.Name = "funcionarios_b";
-            this.funcionarios_b.Size = new System.Drawing.Size(200, 45);
-            this.funcionarios_b.TabIndex = 6;
-            this.funcionarios_b.Text = "Administrar Funcionarios";
-            this.funcionarios_b.UseVisualStyleBackColor = true;
+            funcionarios_b.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            funcionarios_b.ForeColor = SystemColors.ControlText;
+            funcionarios_b.Location = new Point(167, 383);
+            funcionarios_b.Name = "funcionarios_b";
+            funcionarios_b.Size = new Size(247, 60);
+            funcionarios_b.TabIndex = 6;
+            funcionarios_b.Text = "Administrar Funcionarios";
+            funcionarios_b.UseVisualStyleBackColor = true;
+            funcionarios_b.Click += funcionarios_b_Click;
             // 
             // usuarios_b
             // 
-            this.usuarios_b.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.usuarios_b.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.usuarios_b.Location = new System.Drawing.Point(146, 108);
-            this.usuarios_b.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.usuarios_b.Name = "usuarios_b";
-            this.usuarios_b.Size = new System.Drawing.Size(200, 45);
-            this.usuarios_b.TabIndex = 7;
-            this.usuarios_b.Text = "Administrar Usuarios";
-            this.usuarios_b.UseVisualStyleBackColor = true;
+            usuarios_b.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            usuarios_b.ForeColor = SystemColors.ControlText;
+            usuarios_b.Location = new Point(167, 144);
+            usuarios_b.Name = "usuarios_b";
+            usuarios_b.Size = new Size(229, 60);
+            usuarios_b.TabIndex = 7;
+            usuarios_b.Text = "Administrar Usuarios";
+            usuarios_b.UseVisualStyleBackColor = true;
+            usuarios_b.Click += usuarios_b_Click;
             // 
             // autores_b
             // 
-            this.autores_b.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.autores_b.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.autores_b.Location = new System.Drawing.Point(404, 168);
-            this.autores_b.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.autores_b.Name = "autores_b";
-            this.autores_b.Size = new System.Drawing.Size(200, 45);
-            this.autores_b.TabIndex = 8;
-            this.autores_b.Text = "Administrar Autores";
-            this.autores_b.UseVisualStyleBackColor = true;
+            autores_b.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            autores_b.ForeColor = SystemColors.ControlText;
+            autores_b.Location = new Point(462, 224);
+            autores_b.Name = "autores_b";
+            autores_b.Size = new Size(229, 60);
+            autores_b.TabIndex = 8;
+            autores_b.Text = "Administrar Autores";
+            autores_b.UseVisualStyleBackColor = true;
+            autores_b.Click += autores_b_Click;
             // 
             // cursos_b
             // 
-            this.cursos_b.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cursos_b.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cursos_b.Location = new System.Drawing.Point(146, 348);
-            this.cursos_b.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cursos_b.Name = "cursos_b";
-            this.cursos_b.Size = new System.Drawing.Size(200, 45);
-            this.cursos_b.TabIndex = 9;
-            this.cursos_b.Text = "Administrar Cursos";
-            this.cursos_b.UseVisualStyleBackColor = true;
+            cursos_b.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cursos_b.ForeColor = SystemColors.ControlText;
+            cursos_b.Location = new Point(167, 464);
+            cursos_b.Name = "cursos_b";
+            cursos_b.Size = new Size(229, 60);
+            cursos_b.TabIndex = 9;
+            cursos_b.Text = "Administrar Cursos";
+            cursos_b.UseVisualStyleBackColor = true;
+            cursos_b.Click += cursos_b_Click;
             // 
             // categorias_b
             // 
-            this.categorias_b.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.categorias_b.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.categorias_b.Location = new System.Drawing.Point(404, 228);
-            this.categorias_b.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.categorias_b.Name = "categorias_b";
-            this.categorias_b.Size = new System.Drawing.Size(200, 45);
-            this.categorias_b.TabIndex = 10;
-            this.categorias_b.Text = "Administrar Categorias";
-            this.categorias_b.UseVisualStyleBackColor = true;
+            categorias_b.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            categorias_b.ForeColor = SystemColors.ControlText;
+            categorias_b.Location = new Point(462, 304);
+            categorias_b.Name = "categorias_b";
+            categorias_b.Size = new Size(229, 60);
+            categorias_b.TabIndex = 10;
+            categorias_b.Text = "Administrar Categorias";
+            categorias_b.UseVisualStyleBackColor = true;
+            categorias_b.Click += categorias_b_Click;
             // 
             // reservas_b
             // 
-            this.reservas_b.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.reservas_b.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.reservas_b.Location = new System.Drawing.Point(404, 289);
-            this.reservas_b.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.reservas_b.Name = "reservas_b";
-            this.reservas_b.Size = new System.Drawing.Size(200, 45);
-            this.reservas_b.TabIndex = 11;
-            this.reservas_b.Text = "Administrar Reservas";
-            this.reservas_b.UseVisualStyleBackColor = true;
+            reservas_b.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            reservas_b.ForeColor = SystemColors.ControlText;
+            reservas_b.Location = new Point(462, 385);
+            reservas_b.Name = "reservas_b";
+            reservas_b.Size = new Size(229, 60);
+            reservas_b.TabIndex = 11;
+            reservas_b.Text = "Administrar Reservas";
+            reservas_b.UseVisualStyleBackColor = true;
+            reservas_b.Click += reservas_b_Click;
             // 
             // Administrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 452);
-            this.Controls.Add(this.reservas_b);
-            this.Controls.Add(this.categorias_b);
-            this.Controls.Add(this.cursos_b);
-            this.Controls.Add(this.autores_b);
-            this.Controls.Add(this.usuarios_b);
-            this.Controls.Add(this.funcionarios_b);
-            this.Controls.Add(this.professores_b);
-            this.Controls.Add(this.alunos_b);
-            this.Controls.Add(this.livros_b);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Administrador";
-            this.Text = "Admnistrador";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(862, 603);
+            Controls.Add(reservas_b);
+            Controls.Add(categorias_b);
+            Controls.Add(cursos_b);
+            Controls.Add(autores_b);
+            Controls.Add(usuarios_b);
+            Controls.Add(funcionarios_b);
+            Controls.Add(professores_b);
+            Controls.Add(alunos_b);
+            Controls.Add(livros_b);
+            Controls.Add(label1);
+            Name = "Administrador";
+            Text = "Admnistrador";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
