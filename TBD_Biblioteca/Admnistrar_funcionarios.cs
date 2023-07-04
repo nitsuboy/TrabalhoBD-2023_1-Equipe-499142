@@ -98,10 +98,11 @@ namespace TBD_Biblioteca
                     MessageBox.Show(ex.Message);
                 }
             }
-            else{
+            else
+            {
                 MessageBox.Show("Usuário não encontrado");
             }
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)

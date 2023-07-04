@@ -185,7 +185,7 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Name = "Administrar_professores";
-            Text = "Administrar_alunos";
+            Text = "Administrar professores";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -113,7 +113,7 @@
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Name = "Admnistrar_cursos";
-            Text = "Admnistrar alunos";
+            Text = "Admnistrar cursos";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

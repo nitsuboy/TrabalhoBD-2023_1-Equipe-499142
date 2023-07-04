@@ -71,7 +71,7 @@ namespace TBD_Biblioteca
             DataGridViewRow row = dataGridView1.Rows[0];
 
             textBox1.Text = row.Cells[0].Value.ToString();
-            textBox2.Text = row.Cells[1].Value.ToString();
+            textBox2.Text = row.Cells[2].Value.ToString();
             textBox3.Text = row.Cells[1].Value.ToString();
 
         }

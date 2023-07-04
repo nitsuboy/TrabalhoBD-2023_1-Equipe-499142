@@ -78,7 +78,7 @@
             textBox1.Location = new Point(12, 12);
             textBox1.MinimumSize = new Size(0, 40);
             textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Código categoria";
+            textBox1.PlaceholderText = "Código usuario";
             textBox1.Size = new Size(204, 40);
             textBox1.TabIndex = 7;
             // 
@@ -88,7 +88,7 @@
             textBox2.Location = new Point(222, 12);
             textBox2.MinimumSize = new Size(0, 40);
             textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Descrição da categoria";
+            textBox2.PlaceholderText = "Isbn";
             textBox2.Size = new Size(383, 40);
             textBox2.TabIndex = 8;
             // 
@@ -125,7 +125,7 @@
             Controls.Add(button1);
             Controls.Add(dataGridView1);
             Name = "Admnistrar_reservas";
-            Text = "Admnistrar alunos";
+            Text = "Admnistrar reservas";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
