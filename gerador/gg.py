@@ -74,9 +74,9 @@ def funcionario(ui,f,l) :
 def usuario(a,p,f,u):
     data = []
     for x in range(0,a) :
-        data.append([un(u),"admin",0,"Aluno","usuario"])
-    for x in range(0,p) :
         data.append([un(u),"admin",0,"Professor","usuario"])
+    for x in range(0,p) :
+        data.append([un(u),"admin",0,"Aluno","usuario"])
     for x in range(0,f) :
         data.append([un(u),"admin",0,"Funcionario","usuario"])
 
