@@ -37,11 +37,11 @@ namespace TBD_Biblioteca
             {
                 if (comboBox1.SelectedIndex < 0)
                 {
-                    cmd.CommandText = "SELECT * FROM usuarios";
+                    cmd.CommandText = "SELECT CodUsuario AS \"Codigo\", NomeUsuario AS \"Usuario\", QntLivros AS \"Quantidade de Livros\", TipoUsuario AS \"Tipo de Usuario\" FROM usuarios";
                 }
                 else
                 {
-                    cmd.CommandText = "SELECT * FROM usuarios WHERE TipoUsuario = " + (comboBox1.SelectedIndex + 1);
+                    cmd.CommandText = "SELECT CodUsuario AS \"Codigo\", NomeUsuario AS \"Usuario\", QntLivros AS \"Quantidade de Livros\", TipoUsuario AS \"Tipo de Usuario\" FROM usuarios WHERE TipoUsuario = " + (comboBox1.SelectedIndex + 1);
                 }
                 MySqlDataReader dados = cmd.ExecuteReader();
                 livros.Load(dados);

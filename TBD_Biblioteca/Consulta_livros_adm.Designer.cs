@@ -28,142 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            textBox1 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            dataGridView1 = new DataGridView();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Busca_b = new System.Windows.Forms.Button();
+            this.filtro_tb = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
             // 
-            // label1
+            // checkedListBox1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(406, 20);
-            label1.Name = "label1";
-            label1.Size = new Size(307, 37);
-            label1.TabIndex = 1;
-            label1.Text = "Administração dos livros";
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(53, 86);
-            textBox1.MinimumSize = new Size(0, 40);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Digite o ISBN";
-            textBox1.Size = new Size(204, 40);
-            textBox1.TabIndex = 3;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(41, 229);
-            button1.Name = "button1";
-            button1.Size = new Size(139, 62);
-            button1.TabIndex = 4;
-            button1.Text = "Remover";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(208, 229);
-            button2.Name = "button2";
-            button2.Size = new Size(164, 62);
-            button2.TabIndex = 5;
-            button2.Text = "Alterar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Ano de Lançamento",
+            "Autor",
+            "Editora",
+            "Categoria"});
+            this.checkedListBox1.Location = new System.Drawing.Point(12, 12);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(137, 94);
+            this.checkedListBox1.TabIndex = 0;
+            this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
             // 
             // dataGridView1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(41, 315);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1115, 420);
-            dataGridView1.TabIndex = 6;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 112);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(776, 326);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
-            // textBox2
+            // Busca_b
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(263, 86);
-            textBox2.MinimumSize = new Size(0, 40);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Titulo";
-            textBox2.Size = new Size(689, 40);
-            textBox2.TabIndex = 7;
+            this.Busca_b.Location = new System.Drawing.Point(689, 72);
+            this.Busca_b.Name = "Busca_b";
+            this.Busca_b.Size = new System.Drawing.Size(99, 34);
+            this.Busca_b.TabIndex = 2;
+            this.Busca_b.Text = "Buscar";
+            this.Busca_b.UseVisualStyleBackColor = true;
+            this.Busca_b.Click += new System.EventHandler(this.Busca_b_Click);
             // 
-            // textBox3
+            // filtro_tb
             // 
-            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(53, 155);
-            textBox3.MinimumSize = new Size(0, 40);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Editora";
-            textBox3.Size = new Size(606, 40);
-            textBox3.TabIndex = 8;
+            this.filtro_tb.Location = new System.Drawing.Point(171, 12);
+            this.filtro_tb.Name = "filtro_tb";
+            this.filtro_tb.Size = new System.Drawing.Size(208, 23);
+            this.filtro_tb.TabIndex = 3;
             // 
-            // textBox4
+            // Consulta_livros_usuario
             // 
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(665, 155);
-            textBox4.MinimumSize = new Size(0, 40);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "AnoDeLançamento";
-            textBox4.Size = new Size(287, 40);
-            textBox4.TabIndex = 9;
-            // 
-            // button3
-            // 
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(53, 20);
-            button3.Name = "button3";
-            button3.Size = new Size(95, 42);
-            button3.TabIndex = 13;
-            button3.Text = "Voltar";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // Consulta_livros_adm
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1182, 753);
-            Controls.Add(button3);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(dataGridView1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
-            Name = "Consulta_livros_adm";
-            Text = "Administração dos livros";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.filtro_tb);
+            this.Controls.Add(this.Busca_b);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.checkedListBox1);
+            this.Name = "Consulta_livros_usuario";
+            this.Text = "Consulta";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private Label label1;
-        private TextBox textBox1;
-        private Button button1;
-        private Button button2;
+        private CheckedListBox checkedListBox1;
         private DataGridView dataGridView1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private Button button3;
+        private Button Busca_b;
+        private TextBox filtro_tb;
     }
 }
