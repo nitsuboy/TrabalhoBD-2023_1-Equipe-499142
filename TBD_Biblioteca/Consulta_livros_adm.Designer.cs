@@ -36,6 +36,7 @@
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -121,11 +122,23 @@
             textBox4.Size = new Size(287, 40);
             textBox4.TabIndex = 9;
             // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.Location = new Point(53, 20);
+            button3.Name = "button3";
+            button3.Size = new Size(95, 42);
+            button3.TabIndex = 13;
+            button3.Text = "Voltar";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Consulta_livros_adm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1182, 753);
+            Controls.Add(button3);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
@@ -151,5 +164,6 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
+        private Button button3;
     }
 }
