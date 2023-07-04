@@ -24,6 +24,7 @@ namespace TBD_Biblioteca
             conn.Open();
             cmd.Connection = conn;
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -58,11 +59,11 @@ namespace TBD_Biblioteca
                 this.Close();
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
     }
 }

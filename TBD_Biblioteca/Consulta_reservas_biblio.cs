@@ -50,7 +50,7 @@ namespace TBD_Biblioteca
             try
             {
                 conn.Open();
-                DialogResult res = MessageBox.Show("você deseja dar baixa nessa reserva ?", "reserva", MessageBoxButtons.YesNo);
+                DialogResult res = MessageBox.Show("Você deseja dar baixa nessa reserva ?", "reserva", MessageBoxButtons.YesNo);
                 if (res == DialogResult.Yes)
                 {
                     cmd.CommandText = "DELETE FROM reservas WHERE (Usuario_CodUsuario, Livros_ISBN) = (@coduser, @isbn)";
@@ -60,7 +60,7 @@ namespace TBD_Biblioteca
                     MessageBox.Show("baixa feita");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

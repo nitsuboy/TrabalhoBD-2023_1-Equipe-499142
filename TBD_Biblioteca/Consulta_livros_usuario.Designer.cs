@@ -28,71 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Busca_b = new System.Windows.Forms.Button();
-            this.filtro_tb = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            checkedListBox1 = new CheckedListBox();
+            dataGridView1 = new DataGridView();
+            Busca_b = new Button();
+            filtro_tb = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Ano de Lançamento",
-            "Autor",
-            "Editora",
-            "Categoria"});
-            this.checkedListBox1.Location = new System.Drawing.Point(12, 12);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 94);
-            this.checkedListBox1.TabIndex = 0;
-            this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Items.AddRange(new object[] { "Ano de Lançamento", "Autor", "Editora", "Categoria" });
+            checkedListBox1.Location = new Point(30, 16);
+            checkedListBox1.Margin = new Padding(3, 4, 3, 4);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(291, 114);
+            checkedListBox1.TabIndex = 0;
+            checkedListBox1.ItemCheck += checkedListBox1_ItemCheck;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 112);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 326);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(14, 149);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(756, 391);
+            dataGridView1.TabIndex = 1;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // Busca_b
             // 
-            this.Busca_b.Location = new System.Drawing.Point(689, 72);
-            this.Busca_b.Name = "Busca_b";
-            this.Busca_b.Size = new System.Drawing.Size(99, 34);
-            this.Busca_b.TabIndex = 2;
-            this.Busca_b.Text = "Buscar";
-            this.Busca_b.UseVisualStyleBackColor = true;
-            this.Busca_b.Click += new System.EventHandler(this.Busca_b_Click);
+            Busca_b.Location = new Point(623, 16);
+            Busca_b.Margin = new Padding(3, 4, 3, 4);
+            Busca_b.Name = "Busca_b";
+            Busca_b.Size = new Size(147, 114);
+            Busca_b.TabIndex = 2;
+            Busca_b.Text = "Buscar";
+            Busca_b.UseVisualStyleBackColor = true;
+            Busca_b.Click += Busca_b_Click;
             // 
             // filtro_tb
             // 
-            this.filtro_tb.Location = new System.Drawing.Point(138, 12);
-            this.filtro_tb.Name = "filtro_tb";
-            this.filtro_tb.Size = new System.Drawing.Size(102, 23);
-            this.filtro_tb.TabIndex = 3;
+            filtro_tb.Location = new Point(370, 16);
+            filtro_tb.Margin = new Padding(3, 4, 3, 4);
+            filtro_tb.Name = "filtro_tb";
+            filtro_tb.PlaceholderText = "Filtrar por nome";
+            filtro_tb.Size = new Size(212, 27);
+            filtro_tb.TabIndex = 3;
             // 
             // Consulta_livros_usuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.filtro_tb);
-            this.Controls.Add(this.Busca_b);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.checkedListBox1);
-            this.Name = "Consulta_livros_usuario";
-            this.Text = "Consulta";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(782, 553);
+            Controls.Add(filtro_tb);
+            Controls.Add(Busca_b);
+            Controls.Add(dataGridView1);
+            Controls.Add(checkedListBox1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Consulta_livros_usuario";
+            Text = "Consulta";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

@@ -10,7 +10,7 @@ namespace TBD_Biblioteca
         [STAThread]
         static void Main()
         {
-            Globals.conn = "server=localhost;uid=root;pwd=cacho;database=bibliotecadb";
+            Globals.conn = "server=localhost;uid=root;pwd=lg290300;database=bibliotecadb";
             ApplicationConfiguration.Initialize();
             Application.Run(new login());
         }

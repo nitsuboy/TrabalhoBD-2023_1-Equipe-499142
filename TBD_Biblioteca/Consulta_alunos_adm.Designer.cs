@@ -94,28 +94,31 @@
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(251, 112);
+            textBox2.Location = new Point(251, 106);
+            textBox2.MinimumSize = new Size(0, 40);
             textBox2.Name = "textBox2";
             textBox2.PlaceholderText = "Nome";
-            textBox2.Size = new Size(595, 34);
+            textBox2.Size = new Size(595, 40);
             textBox2.TabIndex = 8;
             // 
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox3.Location = new Point(68, 168);
+            textBox3.MinimumSize = new Size(0, 40);
             textBox3.Name = "textBox3";
             textBox3.PlaceholderText = "Endereço";
-            textBox3.Size = new Size(493, 34);
+            textBox3.Size = new Size(493, 40);
             textBox3.TabIndex = 9;
             // 
             // textBox4
             // 
             textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox4.Location = new Point(567, 168);
+            textBox4.MinimumSize = new Size(0, 40);
             textBox4.Name = "textBox4";
             textBox4.PlaceholderText = "Data Conclusão(Ano-Mes-Dia)";
-            textBox4.Size = new Size(279, 34);
+            textBox4.Size = new Size(279, 40);
             textBox4.TabIndex = 10;
             // 
             // Consulta_alunos_adm

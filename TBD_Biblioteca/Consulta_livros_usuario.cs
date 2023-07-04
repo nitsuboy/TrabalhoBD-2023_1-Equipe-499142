@@ -25,10 +25,10 @@ namespace TBD_Biblioteca
                 cmd.Connection = conn;
                 InitializeComponent();
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            } 
+            }
         }
 
         private void RecarregarTabela()
@@ -97,7 +97,7 @@ namespace TBD_Biblioteca
             cmd.CommandText = "INSERT INTO reservas (Usuario_CodUsuario, Livros_ISBN,reservadata) VALUES (" + Globals.user + ",'" + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + "',now())";
             try
             {
-                DialogResult res = MessageBox.Show("você deseja reservar esse livro ?","reserva",MessageBoxButtons.YesNo);
+                DialogResult res = MessageBox.Show("você deseja reservar esse livro ?", "reserva", MessageBoxButtons.YesNo);
                 if (res == DialogResult.Yes)
                 {
                     cmd.ExecuteNonQuery();
@@ -106,7 +106,7 @@ namespace TBD_Biblioteca
                     RecarregarTabela();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
