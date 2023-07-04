@@ -32,6 +32,7 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            button4 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -48,7 +49,7 @@
             // button1
             // 
             button1.ForeColor = SystemColors.ControlText;
-            button1.Location = new Point(291, 101);
+            button1.Location = new Point(291, 76);
             button1.Name = "button1";
             button1.Size = new Size(186, 48);
             button1.TabIndex = 1;
@@ -59,7 +60,7 @@
             // button2
             // 
             button2.ForeColor = SystemColors.ControlText;
-            button2.Location = new Point(291, 179);
+            button2.Location = new Point(291, 156);
             button2.Name = "button2";
             button2.Size = new Size(186, 50);
             button2.TabIndex = 2;
@@ -70,7 +71,7 @@
             // button3
             // 
             button3.ForeColor = SystemColors.ControlText;
-            button3.Location = new Point(291, 257);
+            button3.Location = new Point(291, 236);
             button3.Name = "button3";
             button3.Size = new Size(183, 54);
             button3.TabIndex = 3;
@@ -78,16 +79,28 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // bilbiotecario
+            // button4
+            // 
+            button4.ForeColor = SystemColors.ControlText;
+            button4.Location = new Point(291, 324);
+            button4.Name = "button4";
+            button4.Size = new Size(183, 54);
+            button4.TabIndex = 4;
+            button4.Text = "Consultar Professores";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // Bilbiotecario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
-            Name = "bilbiotecario";
+            Name = "Bilbiotecario";
             Text = "bilbiotecario";
             ResumeLayout(false);
             PerformLayout();
@@ -99,5 +112,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Button button4;
     }
 }

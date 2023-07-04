@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace TBD_Biblioteca
 {
@@ -25,6 +26,10 @@ namespace TBD_Biblioteca
             cmd.Connection = conn;
             InitializeComponent();
             comboBox1.SelectedIndex = 0;
+            label1.Left = (this.ClientSize.Width - label1.Width) / 2;
+            comboBox1.Left = (this.ClientSize.Width - comboBox1.Width) / 2;
+            textBox1.Left = (this.ClientSize.Width - textBox1.Width) / 2;
+            button2.Left = (this.ClientSize.Width - button2.Width) / 2;
         }
 
         private void button2_Click(object sender, EventArgs e)

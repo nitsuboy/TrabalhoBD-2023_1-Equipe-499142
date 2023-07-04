@@ -34,6 +34,13 @@ namespace TBD_Biblioteca
         private void RecarregarTabela()
         {
             string[] tabela = { "livros", "titulo" };
+            try 
+            {
+                conn.Close();
+            } 
+            catch 
+            { 
+            }
             try
             {
                 switch (checkedListBox1.CheckedItems[0])
@@ -54,7 +61,7 @@ namespace TBD_Biblioteca
                         tabela[0] = "livrosporano";
                         tabela[1] = "ano";
                         break;
-                }
+                }  
             }
             catch (Exception) { }
 
@@ -93,22 +100,27 @@ namespace TBD_Biblioteca
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            conn.Open();
+            
             cmd.CommandText = "INSERT INTO reservas (Usuario_CodUsuario, Livros_ISBN,reservadata) VALUES (" + Globals.user + ",'" + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + "',now())";
             try
             {
+                conn.Open();
                 DialogResult res = MessageBox.Show("você deseja reservar esse livro ?", "reserva", MessageBoxButtons.YesNo);
                 if (res == DialogResult.Yes)
                 {
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("reserva efetuada");
-                    conn.Close();
                     RecarregarTabela();
                 }
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            finally 
+            { 
+                conn.Close(); 
             }
         }
     }

@@ -28,58 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            button1 = new Button();
+            label1 = new Label();
+            button2 = new Button();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(168, 95);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Consultar/Reservar Livros";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(192, 127);
+            button1.Name = "button1";
+            button1.Size = new Size(242, 53);
+            button1.TabIndex = 0;
+            button1.Text = "Consultar/Reservar Livros";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(131, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 41);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "TELA DE USUÁRIO";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(150, 12);
+            label1.Name = "label1";
+            label1.Size = new Size(320, 50);
+            label1.TabIndex = 1;
+            label1.Text = "TELA DE USUÁRIO";
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(168, 152);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(212, 40);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Consultar Professores";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.Location = new Point(192, 203);
+            button2.Name = "button2";
+            button2.Size = new Size(242, 53);
+            button2.TabIndex = 2;
+            button2.Text = "Consultar Professores";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Usuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 239);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Usuario";
-            this.Text = "Usuário";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(614, 319);
+            Controls.Add(button2);
+            Controls.Add(label1);
+            Controls.Add(button1);
+            Name = "Usuario";
+            Text = "Usuário";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

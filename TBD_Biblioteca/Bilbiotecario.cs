@@ -39,5 +39,11 @@ namespace TBD_Biblioteca
             var reservas = new Consulta_reservas_biblio();
             reservas.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var professores = new consulta_professores_biblio();
+            professores.ShowDialog();
+        }
     }
 }

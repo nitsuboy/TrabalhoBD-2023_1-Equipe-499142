@@ -20,7 +20,14 @@ namespace TBD_Biblioteca
             }
             Globals.conn = File.ReadAllText("conn.cfg");
             ApplicationConfiguration.Initialize();
-            Application.Run(new login());
+            try
+            {
+                Application.Run(new login());
+            }
+            catch
+            {
+
+            }
         }
     }
 }

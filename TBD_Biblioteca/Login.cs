@@ -16,18 +16,20 @@ namespace TBD_Biblioteca
             {
                 conn.Open();
                 cmd.Connection = conn;
+                InitializeComponent();
+                login_b.Left = (this.ClientSize.Width - login_b.Width) / 2;
+                cadastro.Left = (this.ClientSize.Width - cadastro.Width) / 2;
+                Username.Left = (this.ClientSize.Width - Username.Width) / 2;
+                senha.Left = (this.ClientSize.Width - senha.Width) / 2;
+                label1.Left = (this.ClientSize.Width - label1.Width) / 2;
             }
             catch
             {
                 MessageBox.Show("falha ao conectar ao banco de dados");
+                this.Close();
             }
-            
-            InitializeComponent();
-            login_b.Left = (this.ClientSize.Width - login_b.Width) / 2;
-            cadastro.Left = (this.ClientSize.Width - cadastro.Width) / 2;
-            Username.Left = (this.ClientSize.Width - Username.Width) / 2;
-            senha.Left = (this.ClientSize.Width - senha.Width) / 2;
-            label1.Left = (this.ClientSize.Width - label1.Width) / 2;
+
+           
         }
 
         private void login_b_Click(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace TBD_Biblioteca
             {
                 cmd.CommandText = "select * from usuarios where nomeUsuario = '" + Username.Text + "'";
                 MySqlDataReader dados = cmd.ExecuteReader();
-                string[] s = { "", "" , ""};
+                string[] s = { "", "", "" };
                 while (dados.Read())
                 {
                     s[0] = dados.GetString(2);
@@ -91,6 +93,11 @@ namespace TBD_Biblioteca
         private void Username_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                cadastro.PerformClick();
         }
     }
 }

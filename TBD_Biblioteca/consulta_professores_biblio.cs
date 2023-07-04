@@ -1,6 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Utilities.Collections;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,16 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using MySql.Data.MySqlClient;
 
 namespace TBD_Biblioteca
 {
-    public partial class Consulta_professores_usuario : Form
+    public partial class consulta_professores_biblio : Form
     {
         MySqlConnection conn = new MySqlConnection(Globals.conn);
         MySqlCommand cmd = new MySqlCommand();
         DataTable livros = new DataTable();
-        public Consulta_professores_usuario()
+        public consulta_professores_biblio()
         {
             try
             {
@@ -29,8 +27,8 @@ namespace TBD_Biblioteca
             {
                 MessageBox.Show(ex.Message);
             }
-        }
 
+        }
         private void RecarregarTabela()
         {
 
@@ -60,6 +58,5 @@ namespace TBD_Biblioteca
         {
             RecarregarTabela();
         }
-
     }
 }

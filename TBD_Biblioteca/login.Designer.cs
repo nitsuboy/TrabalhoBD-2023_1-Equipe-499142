@@ -28,90 +28,85 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.login_b = new System.Windows.Forms.Button();
-            this.Username = new System.Windows.Forms.TextBox();
-            this.senha = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cadastro = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            login_b = new Button();
+            Username = new TextBox();
+            senha = new TextBox();
+            label1 = new Label();
+            cadastro = new Button();
+            SuspendLayout();
             // 
             // login_b
             // 
-            this.login_b.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.login_b.FlatAppearance.BorderSize = 0;
-            this.login_b.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.login_b.Location = new System.Drawing.Point(106, 283);
-            this.login_b.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.login_b.Name = "login_b";
-            this.login_b.Size = new System.Drawing.Size(131, 38);
-            this.login_b.TabIndex = 1;
-            this.login_b.Text = "Cadastrar";
-            this.login_b.UseVisualStyleBackColor = true;
-            this.login_b.Click += new System.EventHandler(this.cadastro_Click);
+            login_b.Cursor = Cursors.Hand;
+            login_b.FlatAppearance.BorderSize = 0;
+            login_b.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            login_b.Location = new Point(121, 377);
+            login_b.Name = "login_b";
+            login_b.Size = new Size(150, 51);
+            login_b.TabIndex = 1;
+            login_b.Text = "Cadastrar";
+            login_b.UseVisualStyleBackColor = true;
+            login_b.Click += cadastro_Click;
             // 
             // Username
             // 
-            this.Username.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Username.Location = new System.Drawing.Point(56, 111);
-            this.Username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Username.Name = "Username";
-            this.Username.PlaceholderText = "USERNAME";
-            this.Username.Size = new System.Drawing.Size(220, 29);
-            this.Username.TabIndex = 2;
+            Username.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Username.Location = new Point(64, 148);
+            Username.Name = "Username";
+            Username.PlaceholderText = "USERNAME";
+            Username.Size = new Size(251, 34);
+            Username.TabIndex = 2;
             // 
             // senha
             // 
-            this.senha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.senha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.senha.Location = new System.Drawing.Point(56, 164);
-            this.senha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.senha.Name = "senha";
-            this.senha.PlaceholderText = "SENHA";
-            this.senha.Size = new System.Drawing.Size(220, 29);
-            this.senha.TabIndex = 3;
-            this.senha.UseSystemPasswordChar = true;
+            senha.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            senha.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            senha.Location = new Point(64, 219);
+            senha.Name = "senha";
+            senha.PlaceholderText = "SENHA";
+            senha.Size = new Size(251, 34);
+            senha.TabIndex = 3;
+            senha.UseSystemPasswordChar = true;
+            senha.KeyDown += textBox_KeyDown;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(106, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 59);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "LOGIN";
+            label1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 32F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(121, 12);
+            label1.Name = "label1";
+            label1.Size = new Size(185, 72);
+            label1.TabIndex = 4;
+            label1.Text = "LOGIN";
             // 
             // cadastro
             // 
-            this.cadastro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cadastro.FlatAppearance.BorderSize = 0;
-            this.cadastro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cadastro.Location = new System.Drawing.Point(106, 228);
-            this.cadastro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cadastro.Name = "cadastro";
-            this.cadastro.Size = new System.Drawing.Size(131, 38);
-            this.cadastro.TabIndex = 5;
-            this.cadastro.Text = "Entrar";
-            this.cadastro.UseVisualStyleBackColor = true;
-            this.cadastro.Click += new System.EventHandler(this.login_b_Click);
+            cadastro.Cursor = Cursors.Hand;
+            cadastro.FlatAppearance.BorderSize = 0;
+            cadastro.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cadastro.Location = new Point(121, 304);
+            cadastro.Name = "cadastro";
+            cadastro.Size = new Size(150, 51);
+            cadastro.TabIndex = 5;
+            cadastro.Text = "Entrar";
+            cadastro.UseVisualStyleBackColor = true;
+            cadastro.Click += login_b_Click;
             // 
             // login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 347);
-            this.Controls.Add(this.cadastro);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.senha);
-            this.Controls.Add(this.Username);
-            this.Controls.Add(this.login_b);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "login";
-            this.Text = "Login";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(389, 463);
+            Controls.Add(cadastro);
+            Controls.Add(label1);
+            Controls.Add(senha);
+            Controls.Add(Username);
+            Controls.Add(login_b);
+            Name = "login";
+            Text = "Login";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

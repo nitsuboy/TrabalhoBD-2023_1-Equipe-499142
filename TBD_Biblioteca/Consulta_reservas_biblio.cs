@@ -27,6 +27,7 @@ namespace TBD_Biblioteca
 
         private void CarregarReservas()
         {
+            reservas.Clear();
             try
             {
                 conn.Open();
@@ -46,7 +47,8 @@ namespace TBD_Biblioteca
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
+        {   
+            cmd.Parameters.Clear();
             try
             {
                 conn.Open();
