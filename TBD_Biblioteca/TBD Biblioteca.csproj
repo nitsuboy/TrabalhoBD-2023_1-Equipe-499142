@@ -14,6 +14,27 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Administrar_professores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admnistrar_reservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admnistrar_funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admnistrar_cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admnistrar_livros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admnistrar_autores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admnistrar_categorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Consulta_professores_usuario.cs">
       <SubType>Form</SubType>
     </Compile>
