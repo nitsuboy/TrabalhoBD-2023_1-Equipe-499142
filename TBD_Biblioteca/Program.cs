@@ -1,4 +1,5 @@
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace TBD_Biblioteca
 {
@@ -10,7 +11,14 @@ namespace TBD_Biblioteca
         [STAThread]
         static void Main()
         {
-            Globals.conn = "server=localhost;uid=root;pwd=lg290300;database=bibliotecadb";
+            if (!File.Exists("conn.cfg"))
+            {
+                using (StreamWriter w = File.AppendText("conn.cfg"))
+                {
+                    w.Write("server=localhost;uid=root;pwd=;database=bibliotecadb;");
+                }
+            }
+            Globals.conn = File.ReadAllText("conn.cfg");
             ApplicationConfiguration.Initialize();
             Application.Run(new login());
         }
