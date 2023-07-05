@@ -71,9 +71,9 @@ namespace TBD_Biblioteca
                 cmd.Connection = conn;
                 cmd.CommandText = "SELECT * FROM " + tabela[0] + " WHERE " + tabela[1] + " LIKE \"%" + filtro_tb.Text + "%\";";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                livros.Clear();
+                livros.Rows.Clear();
+                livros.Columns.Clear();
                 adapter.Fill(livros);
-                dataGridView1.CancelEdit();
                 dataGridView1.Columns.Clear();
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = livros;
