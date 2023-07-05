@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Utilities;
 using Org.BouncyCastle.Utilities.Collections;
 using System;
 using System.Collections.Generic;
@@ -38,32 +39,31 @@ namespace TBD_Biblioteca
             {
                 conn.Close();
             }
-            catch
+            catch {}
+
+            switch ((0 < checkedListBox1.CheckedItems.Count ? checkedListBox1.CheckedItems[0] : ""))
             {
+                case "Autor":
+                    tabela[0] = "livrosporautor";
+                    tabela[1] = "autor";
+                    break;
+                case "Editora":
+                    tabela[0] = "livrosporeditora";
+                    tabela[1] = "editora";
+                    break;
+                case "Categoria":
+                    tabela[0] = "livrosporcategoria";
+                    tabela[1] = "categoria";
+                    break;
+                case "Ano de Lançamento":
+                    tabela[0] = "livrosporano";
+                    tabela[1] = "ano";
+                    break;
+                default:
+                    tabela[0] = "livros";
+                    tabela[1] = "titulo";
+                    break;
             }
-            try
-            {
-                switch (checkedListBox1.CheckedItems[0])
-                {
-                    case "Autor":
-                        tabela[0] = "livrosporautor";
-                        tabela[1] = "autor";
-                        break;
-                    case "Editora":
-                        tabela[0] = "livrosporeditora";
-                        tabela[1] = "editora";
-                        break;
-                    case "Categoria":
-                        tabela[0] = "livrosporcategoria";
-                        tabela[1] = "categoria";
-                        break;
-                    case "Ano de Lançamento":
-                        tabela[0] = "livrosporano";
-                        tabela[1] = "ano";
-                        break;
-                }
-            }
-            catch (Exception) { }
 
             try
             {
@@ -73,8 +73,9 @@ namespace TBD_Biblioteca
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 livros.Clear();
                 adapter.Fill(livros);
+                dataGridView1.CancelEdit();
+                dataGridView1.Columns.Clear();
                 dataGridView1.DataSource = null;
-                dataGridView1.Rows.Clear();
                 dataGridView1.DataSource = livros;
             }
             catch (Exception ex)

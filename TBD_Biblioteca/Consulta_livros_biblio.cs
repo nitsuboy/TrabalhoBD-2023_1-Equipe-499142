@@ -16,6 +16,7 @@ namespace TBD_Biblioteca
     {
         MySqlConnection conn = new MySqlConnection(Globals.conn);
         MySqlCommand cmd = new MySqlCommand();
+        DataTable livros = new DataTable();
         public Consulta_livros_biblio()
         {
             try
@@ -36,54 +37,73 @@ namespace TBD_Biblioteca
                 if (ix != e.Index) checkedListBox1.SetItemChecked(ix, false);
         }
 
-        private void Busca_b_Click(object sender, EventArgs e)
+        private void RecarregarTabela()
         {
             string[] tabela = { "livros", "titulo" };
-            DataTable livros = new DataTable();
             try
             {
-                switch (checkedListBox1.CheckedItems[0])
-                {
-                    case "Autor":
-                        tabela[0] = "livrosporautor";
-                        tabela[1] = "autor";
-                        break;
-                    case "Editora":
-                        tabela[0] = "livrosporeditora";
-                        tabela[1] = "editora";
-                        break;
-                    case "Categoria":
-                        tabela[0] = "livrosporcategoria";
-                        tabela[1] = "categoria";
-                        break;
-                    case "Ano de Lançamento":
-                        tabela[0] = "livrosporano";
-                        tabela[1] = "ano";
-                        break;
-                }
+                conn.Close();
             }
-            catch (Exception) { }
+            catch { }
+
+            switch ((0 < checkedListBox1.CheckedItems.Count ? checkedListBox1.CheckedItems[0] : ""))
+            {
+                case "Autor":
+                    tabela[0] = "livrosporautor";
+                    tabela[1] = "autor";
+                    break;
+                case "Editora":
+                    tabela[0] = "livrosporeditora";
+                    tabela[1] = "editora";
+                    break;
+                case "Categoria":
+                    tabela[0] = "livrosporcategoria";
+                    tabela[1] = "categoria";
+                    break;
+                case "Ano de Lançamento":
+                    tabela[0] = "livrosporano";
+                    tabela[1] = "ano";
+                    break;
+                default:
+                    tabela[0] = "livros";
+                    tabela[1] = "titulo";
+                    break;
+            }
 
             try
             {
+                conn.Open();
+                cmd.Connection = conn;
                 cmd.CommandText = "SELECT * FROM " + tabela[0] + " WHERE " + tabela[1] + " LIKE \"%" + filtro_tb.Text + "%\";";
-                MySqlDataReader dados = cmd.ExecuteReader();
-                livros.Load(dados);
-                dados.Close();
-                dataGridView1.DataSource = null;
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                livros.Clear();
+                adapter.Fill(livros);
                 dataGridView1.Rows.Clear();
+                dataGridView1.Columns.Clear();
+                dataGridView1.DataSource = null;
                 dataGridView1.DataSource = livros;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+
+        private void Busca_b_Click(object sender, EventArgs e)
+        {
+            RecarregarTabela();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Form add = new reserva(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
             add.ShowDialog();
+            RecarregarTabela();
         }
     }
 }

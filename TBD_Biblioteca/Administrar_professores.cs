@@ -52,7 +52,7 @@ namespace TBD_Biblioteca
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dataGridView1.Rows[0];
+            var row = dataGridView1.SelectedRows[0];
 
             textBox1.Text = row.Cells[0].Value.ToString();
             textBox2.Text = row.Cells[1].Value.ToString();
@@ -90,7 +90,7 @@ namespace TBD_Biblioteca
                 {
                     cmd.CommandText =
                     "INSERT INTO professores (matsiape, usuario_codusuario ,nome, endereco, telefonecelular, regimetrabalho, datacontratacao, cursos_codcurso) " +
-                    "VALUES (@matsiape, @usuario_codusuario, @nome, @endereco, @telefonecelular, @regimetrabalho,DATE(@datacontratacao), @curso_codcurso);";
+                    "VALUES (@matsiape, @usuario_codusuario, @nome, @endereco, @telefonecelular, @regimetrabalho,STR_TO_DATE(@datacontratacao, '%d/%m/%Y %H:%i:%s'), @curso_codcurso);";
 
                     cmd.Parameters.AddWithValue("@matsiape", textBox1.Text);
                     cmd.Parameters.AddWithValue("@usuario_codusuario", textBox7.Text);
@@ -121,7 +121,7 @@ namespace TBD_Biblioteca
             try
             {
                 cmd.CommandText = "UPDATE professores SET " +
-                    "nome=@nome, endereco=@endereco, telefonecelular=@telefonecelular, regimetrabalho=@regimetrabalho, datacontratacao=DATE(@datacontratacao), cursos_codcurso=@curso_codcurso" +
+                    "nome=@nome, endereco=@endereco, telefonecelular=@telefonecelular, regimetrabalho=@regimetrabalho, datacontratacao=STR_TO_DATE(@datacontratacao, '%d/%m/%Y %H:%i:%s'), cursos_codcurso=@curso_codcurso" +
                     " WHERE matsiape = @matsiape";
                 cmd.Parameters.AddWithValue("@matsiape", textBox1.Text);
                 cmd.Parameters.AddWithValue("@nome", textBox2.Text);

@@ -52,7 +52,7 @@ namespace TBD_Biblioteca
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dataGridView1.Rows[0];
+            var row = dataGridView1.SelectedRows[0];
 
             textBox1.Text = row.Cells[0].Value.ToString();
             textBox2.Text = row.Cells[1].Value.ToString();
@@ -89,7 +89,7 @@ namespace TBD_Biblioteca
                 {
                     cmd.CommandText =
                     "INSERT INTO alunos (matricula, usuario_codusuario ,nome, endereco, dataingresso, dataconclusaoprevista, cursos_codcurso) " +
-                    "VALUES (@matricula, @usuario_codusuario, @nome, @endereco, DATE(@dataingresso), DATE(@dataconclusao), @curso_codcurso);";
+                    "VALUES (@matricula, @usuario_codusuario, @nome, @endereco, STR_TO_DATE(@dataingresso, '%d/%m/%Y %H:%i:%s'),STR_TO_DATE(@dataconclusao, '%d/%m/%Y %H:%i:%s'), @curso_codcurso);";
 
                     cmd.Parameters.AddWithValue("@matricula", textBox1.Text);
                     cmd.Parameters.AddWithValue("@usuario_codusuario", textBox7.Text);
@@ -119,8 +119,8 @@ namespace TBD_Biblioteca
             try
             {
                 cmd.CommandText = "UPDATE alunos SET " +
-                    "nome=@nome, endereco=@endereco, dataingresso=DATE(@dataingresso), dataconclusaoprevista=DATE(@dataconclusao), cursos_codcurso=@curso_codcurso" +
-                    " WHERE matricula = @matricula";
+                    "nome=@nome, endereco=@endereco, dataingresso=STR_TO_DATE(@dataingresso, '%d/%m/%Y %H:%i:%s'), dataconclusaoprevista= STR_TO_DATE(@dataconclusao, '%d/%m/%Y %H:%i:%s'), cursos_codcurso=@curso_codcurso " +
+                    "WHERE matricula = @matricula ";
                 cmd.Parameters.AddWithValue("@matricula", textBox1.Text);
                 cmd.Parameters.AddWithValue("@nome", textBox2.Text);
                 cmd.Parameters.AddWithValue("@endereco", textBox3.Text);

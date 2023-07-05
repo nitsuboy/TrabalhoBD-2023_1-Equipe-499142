@@ -67,7 +67,7 @@ namespace TBD_Biblioteca
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dataGridView1.Rows[0];
+            var row = dataGridView1.SelectedRows[0];
 
             textBox1.Text = row.Cells[0].Value.ToString();
             textBox2.Text = row.Cells[1].Value.ToString();

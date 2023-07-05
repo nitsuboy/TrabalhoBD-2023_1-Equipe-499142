@@ -68,7 +68,7 @@ namespace TBD_Biblioteca
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dataGridView1.Rows[0];
+            var row = dataGridView1.SelectedRows[0];
 
             textBox1.Text = row.Cells[0].Value.ToString();
             textBox2.Text = row.Cells[2].Value.ToString();
@@ -83,7 +83,7 @@ namespace TBD_Biblioteca
             {
                 cmd.CommandText =
                     "INSERT INTO reservas (usuario_codusuario, livros_isbn, reservadata) " +
-                    "VALUES (@usuario_codusuario, @livros_isbn, @reservadata);";
+                    "VALUES (@usuario_codusuario, @livros_isbn, STR_TO_DATE(@reservadata, '%d/%m/%Y %H:%i:%s'));";
 
                 cmd.Parameters.AddWithValue("@usuario_codusuario", textBox1.Text);
                 cmd.Parameters.AddWithValue("@livros_isbn", textBox2.Text);
@@ -104,7 +104,7 @@ namespace TBD_Biblioteca
             try
             {
                 cmd.CommandText = "UPDATE reservas SET " +
-                    "usuario_codusuario=@usuario_codusuario, livros_isbn=@livros_isbn, reservadata=@reservadata WHERE usuario_codusuario = @usuario_codusuario";
+                    "usuario_codusuario=@usuario_codusuario, livros_isbn=@livros_isbn, reservadata=STR_TO_DATE(@reservadata, '%d/%m/%Y %H:%i:%s') WHERE usuario_codusuario = @usuario_codusuario";
 
                 cmd.Parameters.AddWithValue("@usuario_codusuario", textBox1.Text);
                 cmd.Parameters.AddWithValue("@livros_isbn", textBox2.Text);

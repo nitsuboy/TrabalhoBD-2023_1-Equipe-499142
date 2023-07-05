@@ -28,69 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
-            checkedListBox1 = new CheckedListBox();
-            filtro_tb = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.filtro_tb = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(664, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(106, 93);
-            button1.TabIndex = 1;
-            button1.Text = "Buscar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += Busca_b_Click;
+            this.button1.Location = new System.Drawing.Point(580, 71);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 33);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Busca_b_Click);
             // 
             // dataGridView1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 144);
-            dataGridView1.MultiSelect = false;
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(758, 397);
-            dataGridView1.TabIndex = 2;
-            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(10, 108);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(663, 298);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // checkedListBox1
             // 
-            checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Items.AddRange(new object[] { "Ano de Lançamento", "Autor", "Editora", "Categoria" });
-            checkedListBox1.Location = new Point(12, 13);
-            checkedListBox1.Margin = new Padding(3, 4, 3, 4);
-            checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(361, 92);
-            checkedListBox1.TabIndex = 4;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Ano de Lançamento",
+            "Autor",
+            "Editora",
+            "Categoria"});
+            this.checkedListBox1.Location = new System.Drawing.Point(10, 10);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(175, 76);
+            this.checkedListBox1.TabIndex = 4;
+            this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
             // 
             // filtro_tb
             // 
-            filtro_tb.Location = new Point(424, 13);
-            filtro_tb.Name = "filtro_tb";
-            filtro_tb.PlaceholderText = "Filtrar por nome";
-            filtro_tb.Size = new Size(182, 27);
-            filtro_tb.TabIndex = 5;
+            this.filtro_tb.Location = new System.Drawing.Point(208, 10);
+            this.filtro_tb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.filtro_tb.Name = "filtro_tb";
+            this.filtro_tb.PlaceholderText = "Filtrar por nome";
+            this.filtro_tb.Size = new System.Drawing.Size(160, 23);
+            this.filtro_tb.TabIndex = 5;
             // 
             // Consulta_livros_biblio
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(782, 553);
-            Controls.Add(filtro_tb);
-            Controls.Add(checkedListBox1);
-            Controls.Add(dataGridView1);
-            Controls.Add(button1);
-            Name = "Consulta_livros_biblio";
-            Text = "Livros";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(684, 415);
+            this.Controls.Add(this.filtro_tb);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Consulta_livros_biblio";
+            this.Text = "Livros";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
