@@ -98,7 +98,6 @@ namespace TBD_Biblioteca
         {
             if (e.KeyCode == Keys.Enter)
                 cadastro.PerformClick();
-                login_b.PerformClick();
         }
     }
 }
